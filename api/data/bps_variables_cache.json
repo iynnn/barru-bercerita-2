@@ -1,0 +1,602 @@
+[
+    {
+        "id": 174,
+        "name": "\tLuas Kawasan Hutan dan Perairan"
+    },
+    {
+        "id": 149,
+        "name": "\tLuas Panen Tanaman Sayuran Menurut Kecamatan dan Jenis Tanaman di Kabupaten Barru (ha)"
+    },
+    {
+        "id": 162,
+        "name": "\tProduksi Daging  Ternak Menurut Jenis Ternak"
+    },
+    {
+        "id": 76,
+        "name": "Angka Harapan Hidup"
+    },
+    {
+        "id": 220,
+        "name": "Angka Harapan Lama Sekolah dan Rata-rata Lama  Sekolah di Kabupaten Barru"
+    },
+    {
+        "id": 176,
+        "name": "Angka Partisipasi"
+    },
+    {
+        "id": 201,
+        "name": "Dana Perbankan Menurut Jenis"
+    },
+    {
+        "id": 138,
+        "name": "Daya Terpasang, Produksi, dan Distribusi Listrik PT. PLN (Persero) pada Cabang\/Ranting PLN Menurut Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 66,
+        "name": "Distribusi PDRB Atas Dasar Harga Berlaku Menurut Pengeluaran di Kabupaten Barru"
+    },
+    {
+        "id": 60,
+        "name": "Distribusi PDRB Kabupaten Barru Atas Dasar Harga Berlaku Menurut Lapangan Usaha "
+    },
+    {
+        "id": 92,
+        "name": "DISTRIBUSI PERSENTASE PDRB SERI 2010 MENURUT PENGELUARAN "
+    },
+    {
+        "id": 281,
+        "name": "Distribusi Produk Domestik Regional Bruto (PDRB) Triwulanan Atas Dasar Harga Berlaku Menurut 17 Kategori Lapangan Usaha Kabupaten Barru"
+    },
+    {
+        "id": 277,
+        "name": "Distribusi Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut 6 Komponen Pengeluaran Atas Dasar Harga Berlaku Kabupaten Barru"
+    },
+    {
+        "id": 230,
+        "name": "Distribusi Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Atas Dasar Harga Berlaku Kabupaten Barru"
+    },
+    {
+        "id": 229,
+        "name": "Distribusi Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Pengeluaran Atas Dasar Harga Berlaku Kabupaten Barru"
+    },
+    {
+        "id": 80,
+        "name": "Garis Kemiskinan"
+    },
+    {
+        "id": 242,
+        "name": "Gini Rasio di Kabupaten Barru "
+    },
+    {
+        "id": 84,
+        "name": "Golongan Pengeluaran"
+    },
+    {
+        "id": 273,
+        "name": "Harapan Lama Sekolah (HLS) Menurut Jenis Kelamin"
+    },
+    {
+        "id": 264,
+        "name": "Indeks Harga Konsumen (IHK) Menurut Kabupaten\/Kota Inflasi di Sulawesi Selatan"
+    },
+    {
+        "id": 202,
+        "name": "Indeks Kemahalan Konstruksi (IKK)"
+    },
+    {
+        "id": 274,
+        "name": "Indeks Ketimpangan Gender (IKG) Kabupaten Barru"
+    },
+    {
+        "id": 213,
+        "name": "Indeks Pembangunan Gender "
+    },
+    {
+        "id": 267,
+        "name": "Indeks Pembangunan Manusia (IPM) Menurut Jenis Kelamin (menggunakan UHH hasil SP2020 LF) (Tahun)"
+    },
+    {
+        "id": 268,
+        "name": "Indeks Pembangunan Manusia (IPM) Menurut Jenis Kelamin (Tahun)"
+    },
+    {
+        "id": 30,
+        "name": "Indeks Pembangunan Manusia (LF2020)"
+    },
+    {
+        "id": 75,
+        "name": "Indeks Pembangunan Manusia (SP2010)"
+    },
+    {
+        "id": 237,
+        "name": "Indeks Pemberdayaan Gender (IDG)"
+    },
+    {
+        "id": 261,
+        "name": "Inflasi Bulanan (M-to-M) Menurut Kabupaten\/Kota Inflasi di Sulawesi Selatan"
+    },
+    {
+        "id": 266,
+        "name": "Inflasi Tahun Kalender (Y-to-D) 8 Kabupaten Kota di Provinsi Sulawesi Selatan"
+    },
+    {
+        "id": 265,
+        "name": "Inflasi Tahunan (Y-on-Y) 8 Kabupaten Kota (2022=100) di Provinsi Sulawesi Selatan"
+    },
+    {
+        "id": 194,
+        "name": "Inflasi Tahunan (Y-to-Y) Menurut Kabupaten\/Kota Inflasi di Sulawesi Selatan"
+    },
+    {
+        "id": 195,
+        "name": "Jenis Koperasi"
+    },
+    {
+        "id": 110,
+        "name": "Jumlah Anggota Dewan"
+    },
+    {
+        "id": 122,
+        "name": "Jumlah Anggota DPRD Menurut Fraksi"
+    },
+    {
+        "id": 203,
+        "name": "Jumlah Anggota DPRD Menurut Partai Politik"
+    },
+    {
+        "id": 209,
+        "name": "Jumlah Angkatan Kerja Menurut Jenis Kegiatan Selama Seminggu yang Lalu di Kabupaten Barru"
+    },
+    {
+        "id": 210,
+        "name": "Jumlah Balita yang Pernah Mendapat Imunisasi Menurut Kecamatan dan Jenis Imunisasi di Kabupaten Barru"
+    },
+    {
+        "id": 198,
+        "name": "Jumlah Bank Menurut Jenis dan Status Kantor"
+    },
+    {
+        "id": 39,
+        "name": "Jumlah Curah Hujan Menurut Bulan di Kabupaten Barru"
+    },
+    {
+        "id": 107,
+        "name": "Jumlah Desa\/Kelurahan"
+    },
+    {
+        "id": 117,
+        "name": "Jumlah Fasilitas Kesehatan Menurut Kecamatan"
+    },
+    {
+        "id": 42,
+        "name": "Jumlah Hari Hujan di Kabupaten Barru"
+    },
+    {
+        "id": 179,
+        "name": "Jumlah Hotel, Kamar dan Tempat Tidur yang Tersedia di Kabupaten Barru"
+    },
+    {
+        "id": 142,
+        "name": "Jumlah Industri Kecil Menengah, Tenaga Kerja dan Nilai Investasi Menurut Jenis Industri di Kabupaten Barru "
+    },
+    {
+        "id": 164,
+        "name": "Jumlah Kader Sosial Sebagai Pekerja Sosial Masyarakat "
+    },
+    {
+        "id": 146,
+        "name": "Jumlah Kantor Pos Pembantu Menurut Kecamatan di  Kabupaten Barru"
+    },
+    {
+        "id": 167,
+        "name": "Jumlah Karang Taruna Menurut Kecamatan di Kabupaten Barru "
+    },
+    {
+        "id": 211,
+        "name": "Jumlah Kasus 10 Penyakit Terbanyak di Kabupaten Barru"
+    },
+    {
+        "id": 171,
+        "name": "Jumlah Kecelakaan Lalu Lintas dan Korban"
+    },
+    {
+        "id": 183,
+        "name": "Jumlah Kunjungan Kapal Pelayaran Antar Pulau di Pelabuhan Awerang dan Pelabuhan garongkong"
+    },
+    {
+        "id": 112,
+        "name": "Jumlah Pegawai Negeri Sipil Menurut Jenis Kelamin"
+    },
+    {
+        "id": 250,
+        "name": "Jumlah Pekerja Menurut Sektor"
+    },
+    {
+        "id": 140,
+        "name": "Jumlah Pelanggan Air"
+    },
+    {
+        "id": 141,
+        "name": "Jumlah Pelanggan Air"
+    },
+    {
+        "id": 178,
+        "name": "Jumlah Pelanggan Air yang disalurkan"
+    },
+    {
+        "id": 139,
+        "name": "Jumlah Pelanggan Listrik"
+    },
+    {
+        "id": 199,
+        "name": "Jumlah Penabung dan Nilai Tabungan Perbankan"
+    },
+    {
+        "id": 126,
+        "name": "Jumlah pencari kerja menurut jenis kelamin dan kecamatan"
+    },
+    {
+        "id": 129,
+        "name": "Jumlah penduduk berumur 15 tahun keatas menurut jenis kegiatan utama selama seminggu yang lalu dan jenis kelamin"
+    },
+    {
+        "id": 177,
+        "name": "Jumlah Penduduk Berumur 15 Tahun Keatas yang  Bekerja Selama Seminggu Yang Lalu Menurut Jenis  Pekerjaan Utama dan Jenis Kelamin"
+    },
+    {
+        "id": 133,
+        "name": "Jumlah penduduk berumur 15 tahun keatas yang bekerja selama seminggu yang lalu menurut pendidikan tertinggi dan jenis kelamin"
+    },
+    {
+        "id": 131,
+        "name": "Jumlah penduduk berumur 15 tahun keatas yang bekerja selama seminggu yang lalu menurut status pekerjaan utama dan jenis kelamin"
+    },
+    {
+        "id": 256,
+        "name": "Jumlah Penduduk Berusia 15 Tahun ke Atas menurut Status Pekerjaan Utama"
+    },
+    {
+        "id": 168,
+        "name": "Jumlah Penduduk Menurut Kecamatan dan Agama"
+    },
+    {
+        "id": 115,
+        "name": "Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin"
+    },
+    {
+        "id": 253,
+        "name": "Jumlah Penduduk Usia 15 Tahun ke Atas yang Bekerja Menurut Lapangan Pekerjaan Utama "
+    },
+    {
+        "id": 251,
+        "name": "Jumlah Penduduk Usia 15 Tahun ke Atas yang Bekerja Menurut Pendidikan Tinggi yang Ditamatkan "
+    },
+    {
+        "id": 165,
+        "name": "Jumlah Penerima Bantuan (KK)"
+    },
+    {
+        "id": 182,
+        "name": "Jumlah Penumpang Angkutan laut yang naik dan turun diPelabuhan garongkong"
+    },
+    {
+        "id": 260,
+        "name": "Jumlah Perjalanan Wisatawan Nusantara Menurut Kabupaten Asal"
+    },
+    {
+        "id": 259,
+        "name": "Jumlah Perjalanan Wisatawan Nusantara Menurut Kabupaten Tujuan"
+    },
+    {
+        "id": 172,
+        "name": "Jumlah Perkara Yang Diterima\/Diputuskan  Pengadilan Agama "
+    },
+    {
+        "id": 186,
+        "name": "Jumlah Perusahaan yang mendapat surat ijin usaha di Kabupaten Barru"
+    },
+    {
+        "id": 121,
+        "name": "Jumlah PNS menurut Pendidikan dan Jenis Kelamin"
+    },
+    {
+        "id": 148,
+        "name": "Jumlah Rumah Makan, Meja dan Kursi   Menurut Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 184,
+        "name": "Jumlah Sarana Perdagangan di Kabupaten barru"
+    },
+    {
+        "id": 119,
+        "name": "Jumlah Satuan Pemerintahan menurut kecamatan"
+    },
+    {
+        "id": 205,
+        "name": "Jumlah Sertifikat Tanah yang Diterbitkan Menurut Jenis Hak Atas Tanah"
+    },
+    {
+        "id": 204,
+        "name": "Jumlah Surat Nikah yang Diterbitkan Menurut Kecamatan"
+    },
+    {
+        "id": 169,
+        "name": "Jumlah Tempat Peribadatan "
+    },
+    {
+        "id": 116,
+        "name": "Jumlah Tenaga Kesehatan Menurut Kecamatan"
+    },
+    {
+        "id": 163,
+        "name": "Jumlah Ternak Yang Dipotong menurut Jenis Ternak"
+    },
+    {
+        "id": 147,
+        "name": "Jumlah Wisatawan yang Berkunjung Menurut  Objek Wisata di Kabupaten Barru"
+    },
+    {
+        "id": 106,
+        "name": "Kecepatan Angin"
+    },
+    {
+        "id": 101,
+        "name": "Kelembaban Udara"
+    },
+    {
+        "id": 86,
+        "name": "Kelompok Makanan dan Non Makanan"
+    },
+    {
+        "id": 34,
+        "name": "Kemiskinan"
+    },
+    {
+        "id": 193,
+        "name": "Koperasi Aktif"
+    },
+    {
+        "id": 63,
+        "name": "Laju Implisit PDRB Kabupaten Barru Menurut Lapangan Usaha "
+    },
+    {
+        "id": 94,
+        "name": "LAJU IMPLISIT PDRB SERI 2010 MENURUT PENGELUARAN"
+    },
+    {
+        "id": 62,
+        "name": "Laju Pertumbuhan PDRB Kabupaten Barru Atas Dasar Harga Konstan menurut Lapangan Usaha"
+    },
+    {
+        "id": 93,
+        "name": "LAJU PERTUMBUHAN PDRB SERI 2010 MENURUT PENGELUARAN"
+    },
+    {
+        "id": 282,
+        "name": "Laju Pertumbuhan Produk Domestik Regional Bruto (PDRB) Triwulanan Atas Dasar Harga Konstan (2010=100) Menurut 17 Kategori Lapangan Usaha Kabupaten Barru"
+    },
+    {
+        "id": 279,
+        "name": "Laju Pertumbuhan Produk Domestik Regional Bruto (PDRB) Triwulanan Atas Dasar Harga Konstan (2010=100) Menurut 6 Komponen Pengeluaran Kabupaten Barru"
+    },
+    {
+        "id": 232,
+        "name": "Laju Pertumbuhan Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru"
+    },
+    {
+        "id": 234,
+        "name": "Laju Pertumbuhan Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Pengeluaran Kabupaten Barru"
+    },
+    {
+        "id": 154,
+        "name": "Luas Area  Perikanan Darat Menurut Jenis dan Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 151,
+        "name": "Luas Hutan dan Lahan Kritis yang Direhabilitasi  di Kabupaten Barru"
+    },
+    {
+        "id": 150,
+        "name": "Luas Kawasan Hutan dan Perairan Menurut Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 240,
+        "name": "Luas Panen Padi di Kabupaten Barru"
+    },
+    {
+        "id": 33,
+        "name": "Luas Panen, Produksi Dan Produktivitas Padi Di Kabupaten Barru"
+    },
+    {
+        "id": 95,
+        "name": "Luas Wilayah Berdasarkan Kemiringan"
+    },
+    {
+        "id": 36,
+        "name": "Luas Wilayah Menurut Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 180,
+        "name": "Panjang Jalan Menurut Tingkat Kewenangan Pemerintah di Kabupaten Barru"
+    },
+    {
+        "id": 79,
+        "name": "Paritas Daya Beli"
+    },
+    {
+        "id": 58,
+        "name": "PDRB Kabupaten Barru Atas Dasar Harga Berlaku Menurut Lapangan Usaha "
+    },
+    {
+        "id": 52,
+        "name": "PDRB Kabupaten Barru Atas Dasar Harga Konstan Menurut Lapangan Usaha "
+    },
+    {
+        "id": 89,
+        "name": "PDRB SERI 2010 ATAS DASAR HARGA BERLAKU MENURUT PENGELUARAN"
+    },
+    {
+        "id": 91,
+        "name": "PDRB SERI 2010 ATAS DASAR HARGA KONSTAN MENURUT PENGELUARAN "
+    },
+    {
+        "id": 88,
+        "name": "Penduduk Menurut Jenis Kelamin dan Kecamatan"
+    },
+    {
+        "id": 87,
+        "name": "Penduduk menurut Kecamatan"
+    },
+    {
+        "id": 218,
+        "name": "Penduduk, Laju Pertumbuhan Penduduk, Distribusi  Persentase Penduduk, Kepadatan Penduduk, dan Rasio  Jenis Kelamin Penduduk Menurut Kecamatan"
+    },
+    {
+        "id": 270,
+        "name": "Pengeluaran Per Kapita yang Disesuaikan Menurut Jenis Kelamin"
+    },
+    {
+        "id": 187,
+        "name": "Persentase  Rumah  Tangga  menurut  Karakteristik  dan  StatusKepemilikan Bangunan Tempat Tinggal yang Ditempati  "
+    },
+    {
+        "id": 191,
+        "name": "Persentase Anggota Rumah Tangga Berusia 5 Tahun ke Atas menurut  Penggunaan Teknologi Informasi selama Tiga Bulan Terakhir"
+    },
+    {
+        "id": 192,
+        "name": "Persentase Anggota Rumah Tangga Berusia 5 Tahun ke Atas menurut pendidikan  dan Penggunaan Teknologi Informasi selama Tiga Bulan Terakhir,"
+    },
+    {
+        "id": 206,
+        "name": "Persentase Penduduk 10 Tahun Keatas Menurut Status Perkawinan dan Jenis Kelamin"
+    },
+    {
+        "id": 207,
+        "name": "Persentase Penduduk Berumur 15 Tahun Keatas Menurut Pendidikan Tertinggi yang Ditamatkan dan Jenis Kelamin"
+    },
+    {
+        "id": 249,
+        "name": "Persentase Penduduk Berumur 5 Tahun ke Atas Menurut Status Pendidikan dan Jenis Kelamin"
+    },
+    {
+        "id": 81,
+        "name": "Persentase Penduduk Miskin"
+    },
+    {
+        "id": 245,
+        "name": "Persentase Penduduk Usia 15 Tahun ke Atas Menurut Pendidikan Tertinggi yang Ditamatkan"
+    },
+    {
+        "id": 189,
+        "name": "Pesrentase Rumah tangga menurut penggunaan sumber air utama"
+    },
+    {
+        "id": 160,
+        "name": "Populasi Ternak Menurut Jenis Ternak"
+    },
+    {
+        "id": 157,
+        "name": "Populasi Unggas Menurut Jenis Unggas \t"
+    },
+    {
+        "id": 158,
+        "name": "Prduksi Daging Unggas Menurut Jenis Unggas "
+    },
+    {
+        "id": 280,
+        "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut 17 Kategori Lapangan Usaha Kabupaten Barru"
+    },
+    {
+        "id": 275,
+        "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut 6 Komponen Pengeluaran Kabupaten Barru"
+    },
+    {
+        "id": 228,
+        "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru"
+    },
+    {
+        "id": 225,
+        "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Pengeluaran Kabupaten Barru"
+    },
+    {
+        "id": 155,
+        "name": "Produksi Perikanan Darat Menurut Jenis dan Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 153,
+        "name": "Produksi Perikanan Laut dan Darat Menurut Kecamatan di Kabupaten Barru"
+    },
+    {
+        "id": 159,
+        "name": "Produksi Telur Unggas "
+    },
+    {
+        "id": 239,
+        "name": "Produktivitas Padi di Kabupaten Barru (GKG) "
+    },
+    {
+        "id": 258,
+        "name": "Proporsi Perempuan Pernah Kawin 15-49 tahun yang Melahirkan Anak Lahir Hidup Yang Pertama Kali Berumur Kurang dari 20 tahun"
+    },
+    {
+        "id": 257,
+        "name": "Proporsi Perempuan Pernah Kawin 15-49 tahun yang Pernah Melahirkan Anak Lahir Hidup dalam 2 Tahun Terakhir Tidak di Fasilitas Kesehatan"
+    },
+    {
+        "id": 137,
+        "name": "Rata-Rata Harga Eceran Sayuran Menurut Komoditas Sayuran"
+    },
+    {
+        "id": 135,
+        "name": "Rata-Rata Harga Eceren Bahan Kebutuhan Pokok Menurut Jenis Komoditas"
+    },
+    {
+        "id": 272,
+        "name": "Rata-Rata Lama Sekolah (RLS) Menurut Jenis Kelamin"
+    },
+    {
+        "id": 143,
+        "name": "Realisasi  Belanja"
+    },
+    {
+        "id": 144,
+        "name": "Realisasi Belanja"
+    },
+    {
+        "id": 145,
+        "name": "Realisasi Pendapatan"
+    },
+    {
+        "id": 99,
+        "name": "Suhu Udara"
+    },
+    {
+        "id": 170,
+        "name": "Tambahan Narapidana Berdasarkan Putusan Pengadilan Negeri Menurut Bulan dan Jenis Tindakan Pidana"
+    },
+    {
+        "id": 105,
+        "name": "Tekanan Udara"
+    },
+    {
+        "id": 82,
+        "name": "Tingkat Kedalam Kemiskinan"
+    },
+    {
+        "id": 83,
+        "name": "Tingkat Keparahan Kemiskinan"
+    },
+    {
+        "id": 127,
+        "name": "Tingkat Partisipasi Angkatan Kerja dan Tingkat Pengangguran Terbuka "
+    },
+    {
+        "id": 74,
+        "name": "Tipe Tanah"
+    },
+    {
+        "id": 271,
+        "name": "Umur Harapan Hidup saat lahir menurut Jenis Kelamin (menggunakan UHH hasil SP2020 LF)"
+    }
+]

@@ -1,0 +1,5891 @@
+{
+    "categories": [
+        {
+            "id": 2,
+            "name": "Komunikasi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 3,
+            "name": "Perdagangan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 4,
+            "name": "Konstruksi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 5,
+            "name": "Konsumsi dan Pengeluaran",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 6,
+            "name": "Tenaga Kerja",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 7,
+            "name": "Energi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 9,
+            "name": "Industri",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 12,
+            "name": "Kependudukan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 13,
+            "name": "Keuangan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 16,
+            "name": "Pariwisata",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 17,
+            "name": "Transportasi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 20,
+            "name": "Indeks Harga Perdagangan Besar",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 22,
+            "name": "Inflasi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 23,
+            "name": "Kemiskinan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 24,
+            "name": "Peternakan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 25,
+            "name": "IHK",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 26,
+            "name": "Indeks Pembangunan Manusia",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 27,
+            "name": "Sosial Budaya",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 28,
+            "name": "Pendidikan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 29,
+            "name": "Perumahan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 30,
+            "name": "Kesehatan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 34,
+            "name": "Politik dan Keamanan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 40,
+            "name": "Gender",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 52,
+            "name": "Produk Domestik Regional Bruto (Lapangan Usaha)",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 53,
+            "name": "Tanaman Pangan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 54,
+            "name": "Perkebunan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 55,
+            "name": "Hortikultura",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 56,
+            "name": "Perikanan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 60,
+            "name": "Kehutanan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 101,
+            "name": "Pemerintahan",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 102,
+            "name": "Harga Eceran",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 151,
+            "name": "Iklim",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 152,
+            "name": "Lingkungan Hidup",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 153,
+            "name": "Geografi",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 155,
+            "name": "Produk Domestik Regional Bruto (Pengeluaran)",
+            "description": null,
+            "created_at": "2026-06-28 22:10:39",
+            "updated_at": "2026-06-28 22:10:39"
+        },
+        {
+            "id": 520,
+            "name": "Tenaga Kerja",
+            "description": null,
+            "created_at": "2026-06-28 22:59:57",
+            "updated_at": "2026-06-28 22:59:57"
+        },
+        {
+            "id": 522,
+            "name": "Kesehatan",
+            "description": null,
+            "created_at": "2026-06-28 22:37:41",
+            "updated_at": "2026-06-28 22:37:41"
+        },
+        {
+            "id": 531,
+            "name": "Neraca Ekonomi",
+            "description": null,
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 536,
+            "name": "Harga-Harga",
+            "description": null,
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 563,
+            "name": "Kondisi Tempat Tinggal, Kemiskinan, dan Permasalahan Sosial Lintas Sektor",
+            "description": null,
+            "created_at": "2026-06-28 22:11:07",
+            "updated_at": "2026-06-28 22:11:07"
+        },
+        {
+            "id": 564,
+            "name": "Gender dan Kelompok Populasi Khusus",
+            "description": null,
+            "created_at": "2026-06-28 23:11:26",
+            "updated_at": "2026-06-28 23:11:26"
+        }
+    ],
+    "data_tables": [
+        {
+            "bps_var_id": 30,
+            "name": "Indeks Pembangunan Manusia (LF2020)",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "bps_var_id": 34,
+            "name": "Kemiskinan",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "bps_var_id": 52,
+            "name": "PDRB Kabupaten Barru Atas Dasar Harga Konstan Menurut Lapangan Usaha ",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "bps_var_id": 63,
+            "name": "Laju Implisit PDRB Kabupaten Barru Menurut Lapangan Usaha ",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "bps_var_id": 76,
+            "name": "Angka Harapan Hidup",
+            "created_at": "2026-06-28 22:37:41",
+            "updated_at": "2026-06-28 22:37:41"
+        },
+        {
+            "bps_var_id": 81,
+            "name": "Persentase Penduduk Miskin",
+            "created_at": "2026-06-28 22:11:07",
+            "updated_at": "2026-06-28 22:11:07"
+        },
+        {
+            "bps_var_id": 127,
+            "name": "Tingkat Partisipasi Angkatan Kerja dan Tingkat Pengangguran Terbuka ",
+            "created_at": "2026-06-28 22:59:57",
+            "updated_at": "2026-06-28 22:59:57"
+        },
+        {
+            "bps_var_id": 213,
+            "name": "Indeks Pembangunan Gender ",
+            "created_at": "2026-06-28 23:11:26",
+            "updated_at": "2026-06-28 23:11:26"
+        },
+        {
+            "bps_var_id": 228,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "bps_var_id": 261,
+            "name": "Inflasi Bulanan (M-to-M) Menurut Kabupaten\/Kota Inflasi di Sulawesi Selatan",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "bps_var_id": 271,
+            "name": "Umur Harapan Hidup saat lahir menurut Jenis Kelamin (menggunakan UHH hasil SP2020 LF)",
+            "created_at": "2026-06-28 23:09:18",
+            "updated_at": "2026-06-28 23:09:18"
+        }
+    ],
+    "indicators": [
+        {
+            "id": 1,
+            "category_id": 563,
+            "bps_var_id": 81,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Persentase Penduduk Miskin - Persentase Penduduk Miskin",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:07",
+            "updated_at": "2026-06-28 22:11:07"
+        },
+        {
+            "id": 11,
+            "category_id": 563,
+            "bps_var_id": 34,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Kemiskinan - Jumlah Penduduk Miskin (Ribu)",
+            "description": "Sumber: Survei Sosial Ekonomi Nasional (Susenas)",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "id": 12,
+            "category_id": 563,
+            "bps_var_id": 34,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": null,
+            "name": "Kemiskinan - Persentasi Jumlah Penduduk Miskin ",
+            "description": "Sumber: Survei Sosial Ekonomi Nasional (Susenas)",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "id": 13,
+            "category_id": 563,
+            "bps_var_id": 34,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": null,
+            "name": "Kemiskinan - Garis Kemiskinan (Rupiah\/Kapita\/Bulan)",
+            "description": "Sumber: Survei Sosial Ekonomi Nasional (Susenas)",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "id": 20,
+            "category_id": 563,
+            "bps_var_id": 34,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": null,
+            "name": "Kemiskinan - Indeks Kedalaman Kemiskinan",
+            "description": "Sumber: Survei Sosial Ekonomi Nasional (Susenas)",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "id": 21,
+            "category_id": 563,
+            "bps_var_id": 34,
+            "bps_vervar_id": 5,
+            "bps_turvar_id": null,
+            "name": "Kemiskinan - Indeks Keparahan Kemiskinan",
+            "description": "Sumber: Survei Sosial Ekonomi Nasional (Susenas)",
+            "unit": "",
+            "created_at": "2026-06-28 22:11:31",
+            "updated_at": "2026-06-28 22:11:31"
+        },
+        {
+            "id": 82,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pertanian, Kehutanan dan Perikanan",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 83,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pertambangan dan Penggalian",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 84,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Industri Pengolahan",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 85,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pengadaan Listrik dan Gas",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 86,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 5,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 87,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 6,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Konstruksi",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 88,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 7,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 89,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 8,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Transportasi dan Pergudangan",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 90,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 9,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Penyediaan Akomodasi dan Makan Minum",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 91,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 10,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Informasi dan Komunikasi",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 92,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 11,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Keuangan dan Asuransi",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 93,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 12,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Real Estat",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 94,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 13,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Perusahaan",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 95,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 14,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 96,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 15,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Pendidikan",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 97,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 16,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Kesehatan dan Kegiatan Sosial",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 98,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 17,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Lainnya",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 99,
+            "category_id": 531,
+            "bps_var_id": 52,
+            "bps_vervar_id": 18,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Produk Domestik Regional Bruto",
+            "description": "",
+            "unit": "Miliar Rupiah",
+            "created_at": "2026-06-28 22:11:59",
+            "updated_at": "2026-06-28 22:11:59"
+        },
+        {
+            "id": 3665,
+            "category_id": 522,
+            "bps_var_id": 76,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Angka Harapan Hidup - Angka Harapan Hidup",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 22:37:41",
+            "updated_at": "2026-06-28 22:37:41"
+        },
+        {
+            "id": 4425,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 6,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kota Makassar",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 4521,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Watampone",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 4545,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 7,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kota Parepare",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 4557,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 8,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kota Palopo",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 4713,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 9,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Provinsi Sulawesi Selatan",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 4845,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Bulukumba",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 5589,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kabupaten Wajo",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 5601,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kabupaten Sidenreng Rappang",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 5613,
+            "category_id": 536,
+            "bps_var_id": 261,
+            "bps_vervar_id": 5,
+            "bps_turvar_id": null,
+            "name": "8 Kabupaten\/Kota Inflasi - Kabupaten Luwu Timur",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:56:24",
+            "updated_at": "2026-06-28 22:56:24"
+        },
+        {
+            "id": 6123,
+            "category_id": 520,
+            "bps_var_id": 127,
+            "bps_vervar_id": 7310,
+            "bps_turvar_id": 68,
+            "name": "Tingkat Partisipasi Angkatan Kerja dan Tingkat Pengangguran Terbuka  (TPAK)",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:59:57",
+            "updated_at": "2026-06-28 22:59:57"
+        },
+        {
+            "id": 6124,
+            "category_id": 520,
+            "bps_var_id": 127,
+            "bps_vervar_id": 7310,
+            "bps_turvar_id": 69,
+            "name": "Tingkat Partisipasi Angkatan Kerja dan Tingkat Pengangguran Terbuka  (TPT)",
+            "description": "",
+            "unit": "Persen",
+            "created_at": "2026-06-28 22:59:57",
+            "updated_at": "2026-06-28 22:59:57"
+        },
+        {
+            "id": 6173,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pertanian, Kehutanan dan Perikanan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6174,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pertambangan dan Penggalian",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6175,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Industri Pengolahan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6176,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pengadaan Listrik dan Gas",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6177,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 5,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6178,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 6,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Konstruksi",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6179,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 7,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6180,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 8,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Transportasi dan Pergudangan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6181,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 9,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Penyediaan Akomodasi dan Makan Minum",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6182,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 10,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Informasi dan Komunikasi",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6183,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 11,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Keuangan dan Asuransi",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6184,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 12,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Real Estat",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6185,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 13,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Perusahaan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6186,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 14,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6187,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 15,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Pendidikan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6188,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 16,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Kesehatan dan Kegiatan Sosial",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6189,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 17,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Jasa Lainnya",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6190,
+            "category_id": 531,
+            "bps_var_id": 63,
+            "bps_vervar_id": 18,
+            "bps_turvar_id": null,
+            "name": "Lapangan Usaha (PDRB) - Produk Domestik Regional Bruto",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:01:26",
+            "updated_at": "2026-06-28 23:01:26"
+        },
+        {
+            "id": 6461,
+            "category_id": 522,
+            "bps_var_id": 271,
+            "bps_vervar_id": 7310,
+            "bps_turvar_id": 157,
+            "name": "Umur Harapan Hidup saat lahir menurut Jenis Kelamin (menggunakan UHH hasil SP2020 LF) (Laki-laki)",
+            "description": "",
+            "unit": "Tahun",
+            "created_at": "2026-06-28 23:09:18",
+            "updated_at": "2026-06-28 23:09:18"
+        },
+        {
+            "id": 6462,
+            "category_id": 522,
+            "bps_var_id": 271,
+            "bps_vervar_id": 7310,
+            "bps_turvar_id": 158,
+            "name": "Umur Harapan Hidup saat lahir menurut Jenis Kelamin (menggunakan UHH hasil SP2020 LF) (Perempuan)",
+            "description": "",
+            "unit": "Tahun",
+            "created_at": "2026-06-28 23:09:18",
+            "updated_at": "2026-06-28 23:09:18"
+        },
+        {
+            "id": 6473,
+            "category_id": 564,
+            "bps_var_id": 213,
+            "bps_vervar_id": 7310,
+            "bps_turvar_id": null,
+            "name": "Kabupaten - BARRU",
+            "description": "Tahun 2016 hanya level provinsi",
+            "unit": "",
+            "created_at": "2026-06-28 23:11:26",
+            "updated_at": "2026-06-28 23:11:26"
+        },
+        {
+            "id": 6488,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Umur Harapan Hidup (Tahun)",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6489,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Harapan Lama Sekolah (Tahun)",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6490,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Rata-Rata Lama Sekolah (Tahun)",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6491,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Paritas Daya Beli (Ribu Rupiah)",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6492,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 5,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Indeks Kesehatan ",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6493,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 6,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Indeks Pendidikan",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6494,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 7,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Indeks Pengeluaran",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6495,
+            "category_id": 563,
+            "bps_var_id": 30,
+            "bps_vervar_id": 8,
+            "bps_turvar_id": null,
+            "name": "Indikator IPM - Indeks Pembangunan Manusia",
+            "description": "",
+            "unit": "",
+            "created_at": "2026-06-28 23:13:12",
+            "updated_at": "2026-06-28 23:13:12"
+        },
+        {
+            "id": 6528,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": 198,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Berlaku)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6533,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 1,
+            "bps_turvar_id": 199,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Konstan)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6538,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": 198,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Berlaku)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6543,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 2,
+            "bps_turvar_id": 199,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Konstan)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6548,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": 198,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Berlaku)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6553,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 3,
+            "bps_turvar_id": 199,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Konstan)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6558,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": 198,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Berlaku)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        },
+        {
+            "id": 6563,
+            "category_id": 531,
+            "bps_var_id": 228,
+            "bps_vervar_id": 4,
+            "bps_turvar_id": 199,
+            "name": "Produk Domestik Regional Bruto (PDRB) Triwulanan Menurut Lapangan Usaha Kabupaten Barru (Atas Dasar Harga Konstan)",
+            "description": "<b>Cakupan Lapangan Usaha<\/b>\n\n<br\/>\nSektor Primer: <br\/>\nA. Pertanian, Kehutanan, dan Perikanan<br\/>\nB. Pertambangan dan Penggalian<br\/>\n<br\/>\nSektor Sekunder:<br\/>\nC. Industri Pengolahan<br\/>\nD. Pengadaan Listrik dan Gas<br\/>\nE. Pengadaan Air, Pengelolaan Sampah, Limbah dan Daur Ulang<br\/>\nF. Konstruksi<br\/>\n<br\/>\nSektor Tersier:<br\/>\nG. Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor<br\/>\nH. Transportasi dan Pergudangan<br\/> \t\nI. Penyediaan Akomodasi dan Makan Minum<br\/>\nJ. Informasi dan Komunikasi<br\/>\nK. Jasa Keuangan dan Asuransi<br\/>\nL. Real Estat<br\/>\nM,N. Jasa Perusahaan<br\/>\nO. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib<br\/>\nP. Jasa Pendidikan<br\/>\nQ. Jasa Kesehatan dan Kegiatan Sosial<br\/>\nR,S,T,U. Jasa Lainnya<br\/>\n",
+            "unit": "Milyar Rupiah",
+            "created_at": "2026-06-29 08:02:14",
+            "updated_at": "2026-06-29 08:02:14"
+        }
+    ],
+    "values": [
+        {
+            "indicator_id": 1,
+            "year": 2016,
+            "value": 9.45
+        },
+        {
+            "indicator_id": 1,
+            "year": 2017,
+            "value": 9.71
+        },
+        {
+            "indicator_id": 1,
+            "year": 2018,
+            "value": 9.04
+        },
+        {
+            "indicator_id": 1,
+            "year": 2019,
+            "value": 8.57
+        },
+        {
+            "indicator_id": 1,
+            "year": 2020,
+            "value": 8.26
+        },
+        {
+            "indicator_id": 1,
+            "year": 2021,
+            "value": 8.68
+        },
+        {
+            "indicator_id": 1,
+            "year": 2022,
+            "value": 8.4
+        },
+        {
+            "indicator_id": 1,
+            "year": 2023,
+            "value": 8.46
+        },
+        {
+            "indicator_id": 1,
+            "year": 2024,
+            "value": 8.31
+        },
+        {
+            "indicator_id": 1,
+            "year": 2025,
+            "value": 8
+        },
+        {
+            "indicator_id": 11,
+            "year": 2011,
+            "value": 16.12
+        },
+        {
+            "indicator_id": 12,
+            "year": 2011,
+            "value": 9.61
+        },
+        {
+            "indicator_id": 13,
+            "year": 2011,
+            "value": 224201
+        },
+        {
+            "indicator_id": 11,
+            "year": 2012,
+            "value": 15.53
+        },
+        {
+            "indicator_id": 12,
+            "year": 2012,
+            "value": 9.28
+        },
+        {
+            "indicator_id": 13,
+            "year": 2012,
+            "value": 232085
+        },
+        {
+            "indicator_id": 11,
+            "year": 2013,
+            "value": 14.5
+        },
+        {
+            "indicator_id": 12,
+            "year": 2013,
+            "value": 10.32
+        },
+        {
+            "indicator_id": 13,
+            "year": 2013,
+            "value": 246303
+        },
+        {
+            "indicator_id": 20,
+            "year": 2013,
+            "value": 1.33
+        },
+        {
+            "indicator_id": 21,
+            "year": 2013,
+            "value": 0.26
+        },
+        {
+            "indicator_id": 11,
+            "year": 2014,
+            "value": 16.6
+        },
+        {
+            "indicator_id": 12,
+            "year": 2014,
+            "value": 9.74
+        },
+        {
+            "indicator_id": 13,
+            "year": 2014,
+            "value": 253904
+        },
+        {
+            "indicator_id": 20,
+            "year": 2014,
+            "value": 1.14
+        },
+        {
+            "indicator_id": 21,
+            "year": 2014,
+            "value": 0.21
+        },
+        {
+            "indicator_id": 11,
+            "year": 2015,
+            "value": 16.1
+        },
+        {
+            "indicator_id": 12,
+            "year": 2015,
+            "value": 9.42
+        },
+        {
+            "indicator_id": 13,
+            "year": 2015,
+            "value": 263210
+        },
+        {
+            "indicator_id": 20,
+            "year": 2015,
+            "value": 1.55
+        },
+        {
+            "indicator_id": 21,
+            "year": 2015,
+            "value": 0.37
+        },
+        {
+            "indicator_id": 11,
+            "year": 2016,
+            "value": 16.24
+        },
+        {
+            "indicator_id": 12,
+            "year": 2016,
+            "value": 9.45
+        },
+        {
+            "indicator_id": 13,
+            "year": 2016,
+            "value": 280316
+        },
+        {
+            "indicator_id": 20,
+            "year": 2016,
+            "value": 1.71
+        },
+        {
+            "indicator_id": 21,
+            "year": 2016,
+            "value": 0.52
+        },
+        {
+            "indicator_id": 11,
+            "year": 2017,
+            "value": 16.76
+        },
+        {
+            "indicator_id": 12,
+            "year": 2017,
+            "value": 9.71
+        },
+        {
+            "indicator_id": 13,
+            "year": 2017,
+            "value": 289371
+        },
+        {
+            "indicator_id": 20,
+            "year": 2017,
+            "value": 1.43
+        },
+        {
+            "indicator_id": 21,
+            "year": 2017,
+            "value": 0.32
+        },
+        {
+            "indicator_id": 11,
+            "year": 2018,
+            "value": 15.68
+        },
+        {
+            "indicator_id": 12,
+            "year": 2018,
+            "value": 9.04
+        },
+        {
+            "indicator_id": 13,
+            "year": 2018,
+            "value": 307904
+        },
+        {
+            "indicator_id": 20,
+            "year": 2018,
+            "value": 1.58
+        },
+        {
+            "indicator_id": 21,
+            "year": 2018,
+            "value": 0.37
+        },
+        {
+            "indicator_id": 11,
+            "year": 2019,
+            "value": 14.92
+        },
+        {
+            "indicator_id": 12,
+            "year": 2019,
+            "value": 8.57
+        },
+        {
+            "indicator_id": 13,
+            "year": 2019,
+            "value": 322248
+        },
+        {
+            "indicator_id": 20,
+            "year": 2019,
+            "value": 1.07
+        },
+        {
+            "indicator_id": 21,
+            "year": 2019,
+            "value": 0.21
+        },
+        {
+            "indicator_id": 11,
+            "year": 2020,
+            "value": 14.44
+        },
+        {
+            "indicator_id": 12,
+            "year": 2020,
+            "value": 8.26
+        },
+        {
+            "indicator_id": 13,
+            "year": 2020,
+            "value": 337047
+        },
+        {
+            "indicator_id": 20,
+            "year": 2020,
+            "value": 1.31
+        },
+        {
+            "indicator_id": 21,
+            "year": 2020,
+            "value": 0.36
+        },
+        {
+            "indicator_id": 11,
+            "year": 2021,
+            "value": 15.18
+        },
+        {
+            "indicator_id": 12,
+            "year": 2021,
+            "value": 8.68
+        },
+        {
+            "indicator_id": 13,
+            "year": 2021,
+            "value": 351924
+        },
+        {
+            "indicator_id": 20,
+            "year": 2021,
+            "value": 1.52
+        },
+        {
+            "indicator_id": 21,
+            "year": 2021,
+            "value": 0.39
+        },
+        {
+            "indicator_id": 11,
+            "year": 2022,
+            "value": 14.73
+        },
+        {
+            "indicator_id": 12,
+            "year": 2022,
+            "value": 8.4
+        },
+        {
+            "indicator_id": 13,
+            "year": 2022,
+            "value": 368150
+        },
+        {
+            "indicator_id": 20,
+            "year": 2022,
+            "value": 0.98
+        },
+        {
+            "indicator_id": 21,
+            "year": 2022,
+            "value": 0.15
+        },
+        {
+            "indicator_id": 11,
+            "year": 2023,
+            "value": 14.88
+        },
+        {
+            "indicator_id": 12,
+            "year": 2023,
+            "value": 8.46
+        },
+        {
+            "indicator_id": 13,
+            "year": 2023,
+            "value": 400702
+        },
+        {
+            "indicator_id": 20,
+            "year": 2023,
+            "value": 1.48
+        },
+        {
+            "indicator_id": 21,
+            "year": 2023,
+            "value": 0.45
+        },
+        {
+            "indicator_id": 11,
+            "year": 2024,
+            "value": 14.64
+        },
+        {
+            "indicator_id": 12,
+            "year": 2024,
+            "value": 8.31
+        },
+        {
+            "indicator_id": 13,
+            "year": 2024,
+            "value": 417396
+        },
+        {
+            "indicator_id": 20,
+            "year": 2024,
+            "value": 1.11
+        },
+        {
+            "indicator_id": 21,
+            "year": 2024,
+            "value": 0.22
+        },
+        {
+            "indicator_id": 11,
+            "year": 2025,
+            "value": 14.13
+        },
+        {
+            "indicator_id": 12,
+            "year": 2025,
+            "value": 8
+        },
+        {
+            "indicator_id": 13,
+            "year": 2025,
+            "value": 426792
+        },
+        {
+            "indicator_id": 20,
+            "year": 2025,
+            "value": 0.94
+        },
+        {
+            "indicator_id": 21,
+            "year": 2025,
+            "value": 0.17
+        },
+        {
+            "indicator_id": 82,
+            "year": 2010,
+            "value": 1004.39
+        },
+        {
+            "indicator_id": 83,
+            "year": 2010,
+            "value": 60.65
+        },
+        {
+            "indicator_id": 84,
+            "year": 2010,
+            "value": 145.1
+        },
+        {
+            "indicator_id": 85,
+            "year": 2010,
+            "value": 3.13
+        },
+        {
+            "indicator_id": 86,
+            "year": 2010,
+            "value": 2.96
+        },
+        {
+            "indicator_id": 87,
+            "year": 2010,
+            "value": 367.4
+        },
+        {
+            "indicator_id": 88,
+            "year": 2010,
+            "value": 216.09
+        },
+        {
+            "indicator_id": 89,
+            "year": 2010,
+            "value": 56.35
+        },
+        {
+            "indicator_id": 90,
+            "year": 2010,
+            "value": 26.1
+        },
+        {
+            "indicator_id": 91,
+            "year": 2010,
+            "value": 99.88
+        },
+        {
+            "indicator_id": 92,
+            "year": 2010,
+            "value": 58.93
+        },
+        {
+            "indicator_id": 93,
+            "year": 2010,
+            "value": 90.23
+        },
+        {
+            "indicator_id": 94,
+            "year": 2010,
+            "value": 0.8
+        },
+        {
+            "indicator_id": 95,
+            "year": 2010,
+            "value": 232.96
+        },
+        {
+            "indicator_id": 96,
+            "year": 2010,
+            "value": 109.73
+        },
+        {
+            "indicator_id": 97,
+            "year": 2010,
+            "value": 69.1
+        },
+        {
+            "indicator_id": 98,
+            "year": 2010,
+            "value": 16.56
+        },
+        {
+            "indicator_id": 99,
+            "year": 2010,
+            "value": 2560.34
+        },
+        {
+            "indicator_id": 82,
+            "year": 2011,
+            "value": 1082.53
+        },
+        {
+            "indicator_id": 83,
+            "year": 2011,
+            "value": 66.84
+        },
+        {
+            "indicator_id": 84,
+            "year": 2011,
+            "value": 157.14
+        },
+        {
+            "indicator_id": 85,
+            "year": 2011,
+            "value": 3.42
+        },
+        {
+            "indicator_id": 86,
+            "year": 2011,
+            "value": 3.42
+        },
+        {
+            "indicator_id": 87,
+            "year": 2011,
+            "value": 394.07
+        },
+        {
+            "indicator_id": 88,
+            "year": 2011,
+            "value": 234.68
+        },
+        {
+            "indicator_id": 89,
+            "year": 2011,
+            "value": 61.16
+        },
+        {
+            "indicator_id": 90,
+            "year": 2011,
+            "value": 27.25
+        },
+        {
+            "indicator_id": 91,
+            "year": 2011,
+            "value": 116.55
+        },
+        {
+            "indicator_id": 92,
+            "year": 2011,
+            "value": 67.94
+        },
+        {
+            "indicator_id": 93,
+            "year": 2011,
+            "value": 97.34
+        },
+        {
+            "indicator_id": 94,
+            "year": 2011,
+            "value": 0.82
+        },
+        {
+            "indicator_id": 95,
+            "year": 2011,
+            "value": 246.28
+        },
+        {
+            "indicator_id": 96,
+            "year": 2011,
+            "value": 117.19
+        },
+        {
+            "indicator_id": 97,
+            "year": 2011,
+            "value": 74.1
+        },
+        {
+            "indicator_id": 98,
+            "year": 2011,
+            "value": 17.78
+        },
+        {
+            "indicator_id": 99,
+            "year": 2011,
+            "value": 2768.52
+        },
+        {
+            "indicator_id": 82,
+            "year": 2012,
+            "value": 1134.96
+        },
+        {
+            "indicator_id": 83,
+            "year": 2012,
+            "value": 83.67
+        },
+        {
+            "indicator_id": 84,
+            "year": 2012,
+            "value": 168.23
+        },
+        {
+            "indicator_id": 85,
+            "year": 2012,
+            "value": 3.88
+        },
+        {
+            "indicator_id": 86,
+            "year": 2012,
+            "value": 3.53
+        },
+        {
+            "indicator_id": 87,
+            "year": 2012,
+            "value": 441.05
+        },
+        {
+            "indicator_id": 88,
+            "year": 2012,
+            "value": 265.05
+        },
+        {
+            "indicator_id": 89,
+            "year": 2012,
+            "value": 67.18
+        },
+        {
+            "indicator_id": 90,
+            "year": 2012,
+            "value": 28.79
+        },
+        {
+            "indicator_id": 91,
+            "year": 2012,
+            "value": 140.47
+        },
+        {
+            "indicator_id": 92,
+            "year": 2012,
+            "value": 78.84
+        },
+        {
+            "indicator_id": 93,
+            "year": 2012,
+            "value": 103.29
+        },
+        {
+            "indicator_id": 94,
+            "year": 2012,
+            "value": 0.85
+        },
+        {
+            "indicator_id": 95,
+            "year": 2012,
+            "value": 257.74
+        },
+        {
+            "indicator_id": 96,
+            "year": 2012,
+            "value": 124.51
+        },
+        {
+            "indicator_id": 97,
+            "year": 2012,
+            "value": 79.82
+        },
+        {
+            "indicator_id": 98,
+            "year": 2012,
+            "value": 18.86
+        },
+        {
+            "indicator_id": 99,
+            "year": 2012,
+            "value": 3000.72
+        },
+        {
+            "indicator_id": 82,
+            "year": 2013,
+            "value": 1194.9
+        },
+        {
+            "indicator_id": 83,
+            "year": 2013,
+            "value": 96.2
+        },
+        {
+            "indicator_id": 84,
+            "year": 2013,
+            "value": 182.32
+        },
+        {
+            "indicator_id": 85,
+            "year": 2013,
+            "value": 4.21
+        },
+        {
+            "indicator_id": 86,
+            "year": 2013,
+            "value": 3.74
+        },
+        {
+            "indicator_id": 87,
+            "year": 2013,
+            "value": 487.49
+        },
+        {
+            "indicator_id": 88,
+            "year": 2013,
+            "value": 291.62
+        },
+        {
+            "indicator_id": 89,
+            "year": 2013,
+            "value": 72.21
+        },
+        {
+            "indicator_id": 90,
+            "year": 2013,
+            "value": 30.19
+        },
+        {
+            "indicator_id": 91,
+            "year": 2013,
+            "value": 169.07
+        },
+        {
+            "indicator_id": 92,
+            "year": 2013,
+            "value": 85.49
+        },
+        {
+            "indicator_id": 93,
+            "year": 2013,
+            "value": 110.1
+        },
+        {
+            "indicator_id": 94,
+            "year": 2013,
+            "value": 0.88
+        },
+        {
+            "indicator_id": 95,
+            "year": 2013,
+            "value": 272.16
+        },
+        {
+            "indicator_id": 96,
+            "year": 2013,
+            "value": 131.08
+        },
+        {
+            "indicator_id": 97,
+            "year": 2013,
+            "value": 86.03
+        },
+        {
+            "indicator_id": 98,
+            "year": 2013,
+            "value": 19.33
+        },
+        {
+            "indicator_id": 99,
+            "year": 2013,
+            "value": 3237
+        },
+        {
+            "indicator_id": 82,
+            "year": 2014,
+            "value": 1305.89
+        },
+        {
+            "indicator_id": 83,
+            "year": 2014,
+            "value": 105.94
+        },
+        {
+            "indicator_id": 84,
+            "year": 2014,
+            "value": 190.83
+        },
+        {
+            "indicator_id": 85,
+            "year": 2014,
+            "value": 4.71
+        },
+        {
+            "indicator_id": 86,
+            "year": 2014,
+            "value": 3.75
+        },
+        {
+            "indicator_id": 87,
+            "year": 2014,
+            "value": 507.4
+        },
+        {
+            "indicator_id": 88,
+            "year": 2014,
+            "value": 325.13
+        },
+        {
+            "indicator_id": 89,
+            "year": 2014,
+            "value": 79.48
+        },
+        {
+            "indicator_id": 90,
+            "year": 2014,
+            "value": 32.5
+        },
+        {
+            "indicator_id": 91,
+            "year": 2014,
+            "value": 178.39
+        },
+        {
+            "indicator_id": 92,
+            "year": 2014,
+            "value": 91.81
+        },
+        {
+            "indicator_id": 93,
+            "year": 2014,
+            "value": 115.24
+        },
+        {
+            "indicator_id": 94,
+            "year": 2014,
+            "value": 0.91
+        },
+        {
+            "indicator_id": 95,
+            "year": 2014,
+            "value": 279.46
+        },
+        {
+            "indicator_id": 96,
+            "year": 2014,
+            "value": 141.53
+        },
+        {
+            "indicator_id": 97,
+            "year": 2014,
+            "value": 89.53
+        },
+        {
+            "indicator_id": 98,
+            "year": 2014,
+            "value": 22.28
+        },
+        {
+            "indicator_id": 99,
+            "year": 2014,
+            "value": 3474.78
+        },
+        {
+            "indicator_id": 82,
+            "year": 2015,
+            "value": 1368.22
+        },
+        {
+            "indicator_id": 83,
+            "year": 2015,
+            "value": 115.48
+        },
+        {
+            "indicator_id": 84,
+            "year": 2015,
+            "value": 200.42
+        },
+        {
+            "indicator_id": 85,
+            "year": 2015,
+            "value": 4.68
+        },
+        {
+            "indicator_id": 86,
+            "year": 2015,
+            "value": 3.76
+        },
+        {
+            "indicator_id": 87,
+            "year": 2015,
+            "value": 537.84
+        },
+        {
+            "indicator_id": 88,
+            "year": 2015,
+            "value": 357.57
+        },
+        {
+            "indicator_id": 89,
+            "year": 2015,
+            "value": 85.2
+        },
+        {
+            "indicator_id": 90,
+            "year": 2015,
+            "value": 34.99
+        },
+        {
+            "indicator_id": 91,
+            "year": 2015,
+            "value": 193.05
+        },
+        {
+            "indicator_id": 92,
+            "year": 2015,
+            "value": 99.66
+        },
+        {
+            "indicator_id": 93,
+            "year": 2015,
+            "value": 125.61
+        },
+        {
+            "indicator_id": 94,
+            "year": 2015,
+            "value": 0.93
+        },
+        {
+            "indicator_id": 95,
+            "year": 2015,
+            "value": 297.07
+        },
+        {
+            "indicator_id": 96,
+            "year": 2015,
+            "value": 152.31
+        },
+        {
+            "indicator_id": 97,
+            "year": 2015,
+            "value": 93.06
+        },
+        {
+            "indicator_id": 98,
+            "year": 2015,
+            "value": 24.38
+        },
+        {
+            "indicator_id": 99,
+            "year": 2015,
+            "value": 3694.24
+        },
+        {
+            "indicator_id": 82,
+            "year": 2016,
+            "value": 1436.85
+        },
+        {
+            "indicator_id": 83,
+            "year": 2016,
+            "value": 119.73
+        },
+        {
+            "indicator_id": 84,
+            "year": 2016,
+            "value": 212.67
+        },
+        {
+            "indicator_id": 85,
+            "year": 2016,
+            "value": 5.4
+        },
+        {
+            "indicator_id": 86,
+            "year": 2016,
+            "value": 4.05
+        },
+        {
+            "indicator_id": 87,
+            "year": 2016,
+            "value": 580.17
+        },
+        {
+            "indicator_id": 88,
+            "year": 2016,
+            "value": 389.85
+        },
+        {
+            "indicator_id": 89,
+            "year": 2016,
+            "value": 91.69
+        },
+        {
+            "indicator_id": 90,
+            "year": 2016,
+            "value": 36.61
+        },
+        {
+            "indicator_id": 91,
+            "year": 2016,
+            "value": 211.94
+        },
+        {
+            "indicator_id": 92,
+            "year": 2016,
+            "value": 115.17
+        },
+        {
+            "indicator_id": 93,
+            "year": 2016,
+            "value": 135.71
+        },
+        {
+            "indicator_id": 94,
+            "year": 2016,
+            "value": 0.96
+        },
+        {
+            "indicator_id": 95,
+            "year": 2016,
+            "value": 293.58
+        },
+        {
+            "indicator_id": 96,
+            "year": 2016,
+            "value": 158.64
+        },
+        {
+            "indicator_id": 97,
+            "year": 2016,
+            "value": 98.15
+        },
+        {
+            "indicator_id": 98,
+            "year": 2016,
+            "value": 25.17
+        },
+        {
+            "indicator_id": 99,
+            "year": 2016,
+            "value": 3916.34
+        },
+        {
+            "indicator_id": 82,
+            "year": 2017,
+            "value": 1501.21
+        },
+        {
+            "indicator_id": 83,
+            "year": 2017,
+            "value": 125.04
+        },
+        {
+            "indicator_id": 84,
+            "year": 2017,
+            "value": 222.58
+        },
+        {
+            "indicator_id": 85,
+            "year": 2017,
+            "value": 5.7
+        },
+        {
+            "indicator_id": 86,
+            "year": 2017,
+            "value": 4.28
+        },
+        {
+            "indicator_id": 87,
+            "year": 2017,
+            "value": 648.67
+        },
+        {
+            "indicator_id": 88,
+            "year": 2017,
+            "value": 422.9
+        },
+        {
+            "indicator_id": 89,
+            "year": 2017,
+            "value": 98.83
+        },
+        {
+            "indicator_id": 90,
+            "year": 2017,
+            "value": 39.17
+        },
+        {
+            "indicator_id": 91,
+            "year": 2017,
+            "value": 232.78
+        },
+        {
+            "indicator_id": 92,
+            "year": 2017,
+            "value": 117.76
+        },
+        {
+            "indicator_id": 93,
+            "year": 2017,
+            "value": 145.36
+        },
+        {
+            "indicator_id": 94,
+            "year": 2017,
+            "value": 1.04
+        },
+        {
+            "indicator_id": 95,
+            "year": 2017,
+            "value": 309.79
+        },
+        {
+            "indicator_id": 96,
+            "year": 2017,
+            "value": 165.05
+        },
+        {
+            "indicator_id": 97,
+            "year": 2017,
+            "value": 102.55
+        },
+        {
+            "indicator_id": 98,
+            "year": 2017,
+            "value": 27.29
+        },
+        {
+            "indicator_id": 99,
+            "year": 2017,
+            "value": 4169.98
+        },
+        {
+            "indicator_id": 82,
+            "year": 2018,
+            "value": 1581.31
+        },
+        {
+            "indicator_id": 83,
+            "year": 2018,
+            "value": 130.68
+        },
+        {
+            "indicator_id": 84,
+            "year": 2018,
+            "value": 232.09
+        },
+        {
+            "indicator_id": 85,
+            "year": 2018,
+            "value": 6.1
+        },
+        {
+            "indicator_id": 86,
+            "year": 2018,
+            "value": 4.62
+        },
+        {
+            "indicator_id": 87,
+            "year": 2018,
+            "value": 714.3
+        },
+        {
+            "indicator_id": 88,
+            "year": 2018,
+            "value": 460.26
+        },
+        {
+            "indicator_id": 89,
+            "year": 2018,
+            "value": 111.5
+        },
+        {
+            "indicator_id": 90,
+            "year": 2018,
+            "value": 43.31
+        },
+        {
+            "indicator_id": 91,
+            "year": 2018,
+            "value": 255.89
+        },
+        {
+            "indicator_id": 92,
+            "year": 2018,
+            "value": 120.72
+        },
+        {
+            "indicator_id": 93,
+            "year": 2018,
+            "value": 153.34
+        },
+        {
+            "indicator_id": 94,
+            "year": 2018,
+            "value": 1.14
+        },
+        {
+            "indicator_id": 95,
+            "year": 2018,
+            "value": 338.93
+        },
+        {
+            "indicator_id": 96,
+            "year": 2018,
+            "value": 173.78
+        },
+        {
+            "indicator_id": 97,
+            "year": 2018,
+            "value": 108.28
+        },
+        {
+            "indicator_id": 98,
+            "year": 2018,
+            "value": 30.29
+        },
+        {
+            "indicator_id": 99,
+            "year": 2018,
+            "value": 4466.54
+        },
+        {
+            "indicator_id": 82,
+            "year": 2019,
+            "value": 1652.72
+        },
+        {
+            "indicator_id": 83,
+            "year": 2019,
+            "value": 138.15
+        },
+        {
+            "indicator_id": 84,
+            "year": 2019,
+            "value": 253.7
+        },
+        {
+            "indicator_id": 85,
+            "year": 2019,
+            "value": 6.39
+        },
+        {
+            "indicator_id": 86,
+            "year": 2019,
+            "value": 5.1
+        },
+        {
+            "indicator_id": 87,
+            "year": 2019,
+            "value": 785.01
+        },
+        {
+            "indicator_id": 88,
+            "year": 2019,
+            "value": 505.36
+        },
+        {
+            "indicator_id": 89,
+            "year": 2019,
+            "value": 126.16
+        },
+        {
+            "indicator_id": 90,
+            "year": 2019,
+            "value": 48.28
+        },
+        {
+            "indicator_id": 91,
+            "year": 2019,
+            "value": 281.43
+        },
+        {
+            "indicator_id": 92,
+            "year": 2019,
+            "value": 124.64
+        },
+        {
+            "indicator_id": 93,
+            "year": 2019,
+            "value": 155.83
+        },
+        {
+            "indicator_id": 94,
+            "year": 2019,
+            "value": 1.25
+        },
+        {
+            "indicator_id": 95,
+            "year": 2019,
+            "value": 375.96
+        },
+        {
+            "indicator_id": 96,
+            "year": 2019,
+            "value": 186.48
+        },
+        {
+            "indicator_id": 97,
+            "year": 2019,
+            "value": 117.3
+        },
+        {
+            "indicator_id": 98,
+            "year": 2019,
+            "value": 33.68
+        },
+        {
+            "indicator_id": 99,
+            "year": 2019,
+            "value": 4797.43
+        },
+        {
+            "indicator_id": 82,
+            "year": 2020,
+            "value": 1662.67
+        },
+        {
+            "indicator_id": 83,
+            "year": 2020,
+            "value": 139.11
+        },
+        {
+            "indicator_id": 84,
+            "year": 2020,
+            "value": 247.14
+        },
+        {
+            "indicator_id": 85,
+            "year": 2020,
+            "value": 6.8
+        },
+        {
+            "indicator_id": 86,
+            "year": 2020,
+            "value": 5.79
+        },
+        {
+            "indicator_id": 87,
+            "year": 2020,
+            "value": 792.83
+        },
+        {
+            "indicator_id": 88,
+            "year": 2020,
+            "value": 497.56
+        },
+        {
+            "indicator_id": 89,
+            "year": 2020,
+            "value": 112.19
+        },
+        {
+            "indicator_id": 90,
+            "year": 2020,
+            "value": 48.24
+        },
+        {
+            "indicator_id": 91,
+            "year": 2020,
+            "value": 313.08
+        },
+        {
+            "indicator_id": 92,
+            "year": 2020,
+            "value": 127.94
+        },
+        {
+            "indicator_id": 93,
+            "year": 2020,
+            "value": 160
+        },
+        {
+            "indicator_id": 94,
+            "year": 2020,
+            "value": 1.18
+        },
+        {
+            "indicator_id": 95,
+            "year": 2020,
+            "value": 371.71
+        },
+        {
+            "indicator_id": 96,
+            "year": 2020,
+            "value": 195.61
+        },
+        {
+            "indicator_id": 97,
+            "year": 2020,
+            "value": 125.65
+        },
+        {
+            "indicator_id": 98,
+            "year": 2020,
+            "value": 31.6
+        },
+        {
+            "indicator_id": 99,
+            "year": 2020,
+            "value": 4839.12
+        },
+        {
+            "indicator_id": 82,
+            "year": 2021,
+            "value": 1751.02
+        },
+        {
+            "indicator_id": 83,
+            "year": 2021,
+            "value": 144.1
+        },
+        {
+            "indicator_id": 84,
+            "year": 2021,
+            "value": 259.09
+        },
+        {
+            "indicator_id": 85,
+            "year": 2021,
+            "value": 7.28
+        },
+        {
+            "indicator_id": 86,
+            "year": 2021,
+            "value": 6.08
+        },
+        {
+            "indicator_id": 87,
+            "year": 2021,
+            "value": 825.6
+        },
+        {
+            "indicator_id": 88,
+            "year": 2021,
+            "value": 524.82
+        },
+        {
+            "indicator_id": 89,
+            "year": 2021,
+            "value": 121.03
+        },
+        {
+            "indicator_id": 90,
+            "year": 2021,
+            "value": 50.57
+        },
+        {
+            "indicator_id": 91,
+            "year": 2021,
+            "value": 332.02
+        },
+        {
+            "indicator_id": 92,
+            "year": 2021,
+            "value": 136.88
+        },
+        {
+            "indicator_id": 93,
+            "year": 2021,
+            "value": 163.82
+        },
+        {
+            "indicator_id": 94,
+            "year": 2021,
+            "value": 1.24
+        },
+        {
+            "indicator_id": 95,
+            "year": 2021,
+            "value": 376.89
+        },
+        {
+            "indicator_id": 96,
+            "year": 2021,
+            "value": 200.9
+        },
+        {
+            "indicator_id": 97,
+            "year": 2021,
+            "value": 134.24
+        },
+        {
+            "indicator_id": 98,
+            "year": 2021,
+            "value": 34.41
+        },
+        {
+            "indicator_id": 99,
+            "year": 2021,
+            "value": 5069.99
+        },
+        {
+            "indicator_id": 82,
+            "year": 2022,
+            "value": 1829.94
+        },
+        {
+            "indicator_id": 83,
+            "year": 2022,
+            "value": 148.21
+        },
+        {
+            "indicator_id": 84,
+            "year": 2022,
+            "value": 282.11
+        },
+        {
+            "indicator_id": 85,
+            "year": 2022,
+            "value": 7.41
+        },
+        {
+            "indicator_id": 86,
+            "year": 2022,
+            "value": 6.69
+        },
+        {
+            "indicator_id": 87,
+            "year": 2022,
+            "value": 846.17
+        },
+        {
+            "indicator_id": 88,
+            "year": 2022,
+            "value": 558.81
+        },
+        {
+            "indicator_id": 89,
+            "year": 2022,
+            "value": 139.15
+        },
+        {
+            "indicator_id": 90,
+            "year": 2022,
+            "value": 58.43
+        },
+        {
+            "indicator_id": 91,
+            "year": 2022,
+            "value": 354.82
+        },
+        {
+            "indicator_id": 92,
+            "year": 2022,
+            "value": 138.06
+        },
+        {
+            "indicator_id": 93,
+            "year": 2022,
+            "value": 172.78
+        },
+        {
+            "indicator_id": 94,
+            "year": 2022,
+            "value": 1.44
+        },
+        {
+            "indicator_id": 95,
+            "year": 2022,
+            "value": 395.4
+        },
+        {
+            "indicator_id": 96,
+            "year": 2022,
+            "value": 207.27
+        },
+        {
+            "indicator_id": 97,
+            "year": 2022,
+            "value": 145.4
+        },
+        {
+            "indicator_id": 98,
+            "year": 2022,
+            "value": 37.22
+        },
+        {
+            "indicator_id": 99,
+            "year": 2022,
+            "value": 5329.31
+        },
+        {
+            "indicator_id": 82,
+            "year": 2023,
+            "value": 1843.85
+        },
+        {
+            "indicator_id": 83,
+            "year": 2023,
+            "value": 158.11
+        },
+        {
+            "indicator_id": 84,
+            "year": 2023,
+            "value": 289.19
+        },
+        {
+            "indicator_id": 85,
+            "year": 2023,
+            "value": 8.67
+        },
+        {
+            "indicator_id": 86,
+            "year": 2023,
+            "value": 6.98
+        },
+        {
+            "indicator_id": 87,
+            "year": 2023,
+            "value": 897.62
+        },
+        {
+            "indicator_id": 88,
+            "year": 2023,
+            "value": 586.68
+        },
+        {
+            "indicator_id": 89,
+            "year": 2023,
+            "value": 149.72
+        },
+        {
+            "indicator_id": 90,
+            "year": 2023,
+            "value": 63.59
+        },
+        {
+            "indicator_id": 91,
+            "year": 2023,
+            "value": 385.96
+        },
+        {
+            "indicator_id": 92,
+            "year": 2023,
+            "value": 133.49
+        },
+        {
+            "indicator_id": 93,
+            "year": 2023,
+            "value": 185.31
+        },
+        {
+            "indicator_id": 94,
+            "year": 2023,
+            "value": 1.56
+        },
+        {
+            "indicator_id": 95,
+            "year": 2023,
+            "value": 395.14
+        },
+        {
+            "indicator_id": 96,
+            "year": 2023,
+            "value": 212.33
+        },
+        {
+            "indicator_id": 97,
+            "year": 2023,
+            "value": 157.12
+        },
+        {
+            "indicator_id": 98,
+            "year": 2023,
+            "value": 40.93
+        },
+        {
+            "indicator_id": 99,
+            "year": 2023,
+            "value": 5516.25
+        },
+        {
+            "indicator_id": 82,
+            "year": 2024,
+            "value": 1924.07
+        },
+        {
+            "indicator_id": 83,
+            "year": 2024,
+            "value": 164.81
+        },
+        {
+            "indicator_id": 84,
+            "year": 2024,
+            "value": 302.01
+        },
+        {
+            "indicator_id": 85,
+            "year": 2024,
+            "value": 8.51
+        },
+        {
+            "indicator_id": 86,
+            "year": 2024,
+            "value": 7.1
+        },
+        {
+            "indicator_id": 87,
+            "year": 2024,
+            "value": 926.92
+        },
+        {
+            "indicator_id": 88,
+            "year": 2024,
+            "value": 622.41
+        },
+        {
+            "indicator_id": 89,
+            "year": 2024,
+            "value": 158.91
+        },
+        {
+            "indicator_id": 90,
+            "year": 2024,
+            "value": 67.45
+        },
+        {
+            "indicator_id": 91,
+            "year": 2024,
+            "value": 410.45
+        },
+        {
+            "indicator_id": 92,
+            "year": 2024,
+            "value": 134.4
+        },
+        {
+            "indicator_id": 93,
+            "year": 2024,
+            "value": 196.49
+        },
+        {
+            "indicator_id": 94,
+            "year": 2024,
+            "value": 1.67
+        },
+        {
+            "indicator_id": 95,
+            "year": 2024,
+            "value": 412.99
+        },
+        {
+            "indicator_id": 96,
+            "year": 2024,
+            "value": 226.57
+        },
+        {
+            "indicator_id": 97,
+            "year": 2024,
+            "value": 176.25
+        },
+        {
+            "indicator_id": 98,
+            "year": 2024,
+            "value": 47.34
+        },
+        {
+            "indicator_id": 99,
+            "year": 2024,
+            "value": 5788.38
+        },
+        {
+            "indicator_id": 82,
+            "year": 2025,
+            "value": 2101.56
+        },
+        {
+            "indicator_id": 83,
+            "year": 2025,
+            "value": 163.93
+        },
+        {
+            "indicator_id": 84,
+            "year": 2025,
+            "value": 321.13
+        },
+        {
+            "indicator_id": 85,
+            "year": 2025,
+            "value": 8.73
+        },
+        {
+            "indicator_id": 86,
+            "year": 2025,
+            "value": 7.28
+        },
+        {
+            "indicator_id": 87,
+            "year": 2025,
+            "value": 955.74
+        },
+        {
+            "indicator_id": 88,
+            "year": 2025,
+            "value": 636.14
+        },
+        {
+            "indicator_id": 89,
+            "year": 2025,
+            "value": 163.6
+        },
+        {
+            "indicator_id": 90,
+            "year": 2025,
+            "value": 67.27
+        },
+        {
+            "indicator_id": 91,
+            "year": 2025,
+            "value": 422.22
+        },
+        {
+            "indicator_id": 92,
+            "year": 2025,
+            "value": 138.82
+        },
+        {
+            "indicator_id": 93,
+            "year": 2025,
+            "value": 207.83
+        },
+        {
+            "indicator_id": 94,
+            "year": 2025,
+            "value": 1.76
+        },
+        {
+            "indicator_id": 95,
+            "year": 2025,
+            "value": 428.65
+        },
+        {
+            "indicator_id": 96,
+            "year": 2025,
+            "value": 231.66
+        },
+        {
+            "indicator_id": 97,
+            "year": 2025,
+            "value": 178.5
+        },
+        {
+            "indicator_id": 98,
+            "year": 2025,
+            "value": 52.08
+        },
+        {
+            "indicator_id": 99,
+            "year": 2025,
+            "value": 6086.9
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2012,
+            "value": 67.61
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2013,
+            "value": 67.69
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2014,
+            "value": 67.73
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2015,
+            "value": 68.03
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2016,
+            "value": 68.16
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2017,
+            "value": 68.3
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2018,
+            "value": 68.3
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2019,
+            "value": 68.91
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2020,
+            "value": 69.02
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2021,
+            "value": 69.07
+        },
+        {
+            "indicator_id": 3665,
+            "year": 2022,
+            "value": 69.35
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2000,
+            "value": 2.62
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2001,
+            "value": 2.8
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2002,
+            "value": 1.11
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2003,
+            "value": 0.72
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2004,
+            "value": 1.17
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2005,
+            "value": -0.72
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2006,
+            "value": -0.26
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2007,
+            "value": 1.5
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2008,
+            "value": -0.26
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2008,
+            "value": 0.46
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2008,
+            "value": 0.4
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2008,
+            "value": 0.83
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2009,
+            "value": 0.61
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2009,
+            "value": 0.49
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2009,
+            "value": -0.44
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2009,
+            "value": 0.21
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2010,
+            "value": 0.65
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2010,
+            "value": 1.15
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2010,
+            "value": 1.32
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2010,
+            "value": 0.69
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2011,
+            "value": 0.04
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2011,
+            "value": 0.77
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2011,
+            "value": 0.69
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2011,
+            "value": 0.18
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2011,
+            "value": 0.68
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2012,
+            "value": 0.3
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2012,
+            "value": 0.63
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2012,
+            "value": 0.4
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2012,
+            "value": 0.44
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2012,
+            "value": 0.59
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2013,
+            "value": 0.11
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2013,
+            "value": 0.84
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2013,
+            "value": 0.77
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2013,
+            "value": 0.52
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2013,
+            "value": 0.77
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2014,
+            "value": 2.73
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2014,
+            "value": 2.43
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2014,
+            "value": 2.69
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2014,
+            "value": 3.75
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2014,
+            "value": 2.78
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2014,
+            "value": 2.75
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2015,
+            "value": 1.3
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2015,
+            "value": 0.47
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2015,
+            "value": 0.7
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2015,
+            "value": 0.74
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2015,
+            "value": 0.55
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2015,
+            "value": 0.7
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2016,
+            "value": 0.3
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2016,
+            "value": 0.24
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2016,
+            "value": 0.29
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2016,
+            "value": 0.53
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2016,
+            "value": 0.27
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2016,
+            "value": 0.3
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2017,
+            "value": 0.3
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2017,
+            "value": 0.63
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2017,
+            "value": 1.09
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2017,
+            "value": 1.11
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2017,
+            "value": 0.93
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2017,
+            "value": 1.04
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2018,
+            "value": 0.4
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2018,
+            "value": 0.21
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2018,
+            "value": 0.93
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2018,
+            "value": 0.96
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2018,
+            "value": 0.68
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2018,
+            "value": 0.86
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2019,
+            "value": 0.18
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2019,
+            "value": 0.01
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2019,
+            "value": 0.04
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2019,
+            "value": -0.1
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2019,
+            "value": 0.05
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2019,
+            "value": 0.04
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2020,
+            "value": 0.44
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2020,
+            "value": 0.21
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2020,
+            "value": 0.57
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2020,
+            "value": 0.07
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2020,
+            "value": 0.27
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2020,
+            "value": 0.5
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2021,
+            "value": 0.7
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2021,
+            "value": 1.08
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2021,
+            "value": 0.92
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2021,
+            "value": 1.14
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2021,
+            "value": 0.65
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2021,
+            "value": 0.92
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2022,
+            "value": 0.49
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2022,
+            "value": 0.6
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2022,
+            "value": 0.74
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2022,
+            "value": 0.72
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2022,
+            "value": 0.36
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2022,
+            "value": 0.71
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2023,
+            "value": 0.52
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2023,
+            "value": 0.65
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2023,
+            "value": 0.77
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2023,
+            "value": 0.42
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2023,
+            "value": 0.5
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2023,
+            "value": 0.73
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2024,
+            "value": 0.32
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2024,
+            "value": 0.22
+        },
+        {
+            "indicator_id": 5589,
+            "year": 2024,
+            "value": 0.08
+        },
+        {
+            "indicator_id": 5601,
+            "year": 2024,
+            "value": 0.65
+        },
+        {
+            "indicator_id": 5613,
+            "year": 2024,
+            "value": 0.49
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2024,
+            "value": 0.37
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2024,
+            "value": 0.63
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2024,
+            "value": 0.31
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2024,
+            "value": 0.38
+        },
+        {
+            "indicator_id": 4845,
+            "year": 2025,
+            "value": -0.04
+        },
+        {
+            "indicator_id": 4521,
+            "year": 2025,
+            "value": -0.04
+        },
+        {
+            "indicator_id": 5589,
+            "year": 2025,
+            "value": 0.17
+        },
+        {
+            "indicator_id": 5601,
+            "year": 2025,
+            "value": 0.09
+        },
+        {
+            "indicator_id": 5613,
+            "year": 2025,
+            "value": 0.02
+        },
+        {
+            "indicator_id": 4425,
+            "year": 2025,
+            "value": -0.26
+        },
+        {
+            "indicator_id": 4545,
+            "year": 2025,
+            "value": -0.44
+        },
+        {
+            "indicator_id": 4557,
+            "year": 2025,
+            "value": -0.16
+        },
+        {
+            "indicator_id": 4713,
+            "year": 2025,
+            "value": -0.17
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2000,
+            "value": 40.85
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2000,
+            "value": 3.04
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2001,
+            "value": 45.36
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2001,
+            "value": 6.83
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2002,
+            "value": 45.17
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2002,
+            "value": 7.57
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2003,
+            "value": 45.78
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2003,
+            "value": 6.73
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2004,
+            "value": 53.1
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2004,
+            "value": 15.98
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2005,
+            "value": 52.98
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2005,
+            "value": 13.19
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2006,
+            "value": 52.87
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2006,
+            "value": 13.76
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2007,
+            "value": 53.6
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2007,
+            "value": 9.5
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2008,
+            "value": 53.6
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2008,
+            "value": 10.02
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2009,
+            "value": 51.8
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2009,
+            "value": 8.6
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2010,
+            "value": 57
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2010,
+            "value": 8.94
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2011,
+            "value": 64.23
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2011,
+            "value": 5.75
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2012,
+            "value": 56.75
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2012,
+            "value": 4.78
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2013,
+            "value": 53.43
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2013,
+            "value": 4.51
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2014,
+            "value": 50.4
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2014,
+            "value": 2.3
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2015,
+            "value": 52.63
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2015,
+            "value": 7.68
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2017,
+            "value": 59.47
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2017,
+            "value": 5.6
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2018,
+            "value": 56.73
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2018,
+            "value": 5.38
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2019,
+            "value": 59.4
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2019,
+            "value": 5.39
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2020,
+            "value": 57.18
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2020,
+            "value": 6.39
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2021,
+            "value": 58.14
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2021,
+            "value": 6.74
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2022,
+            "value": 62.36
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2022,
+            "value": 5.32
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2023,
+            "value": 62.26
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2023,
+            "value": 5.89
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2024,
+            "value": 59.32
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2024,
+            "value": 6.42
+        },
+        {
+            "indicator_id": 6123,
+            "year": 2025,
+            "value": 63.91
+        },
+        {
+            "indicator_id": 6124,
+            "year": 2025,
+            "value": 5.07
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2010,
+            "value": 1.88
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2010,
+            "value": 9.7
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2010,
+            "value": 2.65
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2010,
+            "value": 0.22
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2010,
+            "value": 0.83
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2010,
+            "value": 7.83
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2010,
+            "value": 6.77
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2010,
+            "value": 2.86
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2010,
+            "value": 3.14
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2010,
+            "value": 2.5
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2010,
+            "value": 3.45
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2010,
+            "value": 2.28
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2010,
+            "value": 9.37
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2010,
+            "value": 6.48
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2010,
+            "value": 1.6
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2010,
+            "value": 2.25
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2010,
+            "value": 0.91
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2010,
+            "value": 3.77
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2011,
+            "value": 3.03
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2011,
+            "value": 15.11
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2011,
+            "value": 5.63
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2011,
+            "value": -0.81
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2011,
+            "value": 4.74
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2011,
+            "value": 9.43
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2011,
+            "value": 4.37
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2011,
+            "value": 3.09
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2011,
+            "value": 5.44
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2011,
+            "value": 0.73
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2011,
+            "value": 6.89
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2011,
+            "value": 5.41
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2011,
+            "value": 3.49
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2011,
+            "value": 9.31
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2011,
+            "value": 5.64
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2011,
+            "value": 3.66
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2011,
+            "value": 4.05
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2011,
+            "value": 5.29
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2012,
+            "value": 8.81
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2012,
+            "value": 0.6
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2012,
+            "value": 2.87
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2012,
+            "value": -3.41
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2012,
+            "value": 3.3
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2012,
+            "value": 9.04
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2012,
+            "value": 0.93
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2012,
+            "value": 2.73
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2012,
+            "value": 7.26
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2012,
+            "value": 1.65
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2012,
+            "value": 11.93
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2012,
+            "value": 10.68
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2012,
+            "value": 3.44
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2012,
+            "value": 4.5
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2012,
+            "value": 3.01
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2012,
+            "value": 1.69
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2012,
+            "value": 8.16
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2012,
+            "value": 6.46
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2013,
+            "value": 4.67
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2013,
+            "value": 3.56
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2013,
+            "value": 3.5
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2013,
+            "value": -6.37
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2013,
+            "value": 6.03
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2013,
+            "value": 9.87
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2013,
+            "value": 3.1
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2013,
+            "value": 7
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2013,
+            "value": 5.19
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2013,
+            "value": 2.54
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2013,
+            "value": 8.39
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2013,
+            "value": 10.24
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2013,
+            "value": 5.31
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2013,
+            "value": 4.48
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2013,
+            "value": 8.01
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2013,
+            "value": 4.86
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2013,
+            "value": 11.19
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2013,
+            "value": 5.64
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2014,
+            "value": 7.14
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2014,
+            "value": 9.56
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2014,
+            "value": 8.23
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2014,
+            "value": -1.88
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2014,
+            "value": 4.41
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2014,
+            "value": 14.09
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2014,
+            "value": 3.25
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2014,
+            "value": 12.21
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2014,
+            "value": 8.37
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2014,
+            "value": 0.95
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2014,
+            "value": 5.53
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2014,
+            "value": 7.96
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2014,
+            "value": 7.85
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2014,
+            "value": 9.04
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2014,
+            "value": 2.9
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2014,
+            "value": 6.45
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2014,
+            "value": 4.49
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2014,
+            "value": 7.74
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2015,
+            "value": 7.08
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2015,
+            "value": 6.03
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2015,
+            "value": 2.63
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2015,
+            "value": 0.43
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2015,
+            "value": 3.3
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2015,
+            "value": 1.72
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2015,
+            "value": 3.76
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2015,
+            "value": 14.29
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2015,
+            "value": 8.38
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2015,
+            "value": -4.05
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2015,
+            "value": 5.8
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2015,
+            "value": 0.69
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2015,
+            "value": 7.66
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2015,
+            "value": 9.03
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2015,
+            "value": 2.77
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2015,
+            "value": 0.22
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2015,
+            "value": 10.57
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2015,
+            "value": 4.85
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2016,
+            "value": 4.86
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2016,
+            "value": 7.89
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2016,
+            "value": 3.59
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2016,
+            "value": 1.32
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2016,
+            "value": 2.49
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2016,
+            "value": 5.08
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2016,
+            "value": 3.28
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2016,
+            "value": 4.07
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2016,
+            "value": 0.41
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2016,
+            "value": 5.37
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2016,
+            "value": 1.27
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2016,
+            "value": 0.69
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2016,
+            "value": 1.31
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2016,
+            "value": 3.38
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2016,
+            "value": 3.01
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2016,
+            "value": 3.68
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2016,
+            "value": 1.6
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2016,
+            "value": 4.18
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2017,
+            "value": 2.03
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2017,
+            "value": 2.54
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2017,
+            "value": 3.63
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2017,
+            "value": 10.82
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2017,
+            "value": 4.31
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2017,
+            "value": 0.51
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2017,
+            "value": 4.72
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2017,
+            "value": 1.7
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2017,
+            "value": 3.51
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2017,
+            "value": 3.43
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2017,
+            "value": 6.81
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2017,
+            "value": 1.63
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2017,
+            "value": -0.88
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2017,
+            "value": 2.95
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2017,
+            "value": 3.67
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2017,
+            "value": 6.33
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2017,
+            "value": 3.87
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2017,
+            "value": 2.57
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2018,
+            "value": 2.43
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2018,
+            "value": 2.57
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2018,
+            "value": 2.8
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2018,
+            "value": 2.4
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2018,
+            "value": 0.89
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2018,
+            "value": 6.41
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2018,
+            "value": 4.61
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2018,
+            "value": 0.89
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2018,
+            "value": 1.29
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2018,
+            "value": 2.04
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2018,
+            "value": 4.59
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2018,
+            "value": 3.22
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2018,
+            "value": 3.75
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2018,
+            "value": 4.3
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2018,
+            "value": 2.28
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2018,
+            "value": 3.32
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2018,
+            "value": 3.33
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2018,
+            "value": 3.57
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2019,
+            "value": 0.85
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2019,
+            "value": 0.32
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2019,
+            "value": 1.6
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2019,
+            "value": -0.86
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2019,
+            "value": 2.35
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2019,
+            "value": 5.14
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2019,
+            "value": 3.22
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2019,
+            "value": 1.11
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2019,
+            "value": 3.1
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2019,
+            "value": 1.28
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2019,
+            "value": 3.52
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2019,
+            "value": 1.45
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2019,
+            "value": 1.85
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2019,
+            "value": 3.35
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2019,
+            "value": 1.88
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2019,
+            "value": 2.85
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2019,
+            "value": 2.39
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2019,
+            "value": 2.35
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2020,
+            "value": 2.2
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2020,
+            "value": 2.17
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2020,
+            "value": 0.72
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2020,
+            "value": -0.23
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2020,
+            "value": 0.16
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2020,
+            "value": 0.19
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2020,
+            "value": 1.8
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2020,
+            "value": 3.03
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2020,
+            "value": 3.58
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2020,
+            "value": 0.22
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2020,
+            "value": 0.1
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2020,
+            "value": 0.57
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2020,
+            "value": 2.06
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2020,
+            "value": 1.88
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2020,
+            "value": 1.11
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2020,
+            "value": 4.02
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2020,
+            "value": 1.82
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2020,
+            "value": 1.33
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2021,
+            "value": 5.5
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2021,
+            "value": 1.17
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2021,
+            "value": 2.18
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2021,
+            "value": 1.19
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2021,
+            "value": 1.17
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2021,
+            "value": 4.66
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2021,
+            "value": 2.06
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2021,
+            "value": 5.49
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2021,
+            "value": 1.44
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2021,
+            "value": 0.66
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2021,
+            "value": 2.98
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2021,
+            "value": 0.38
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2021,
+            "value": 1.85
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2021,
+            "value": 0.94
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2021,
+            "value": -0.5
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2021,
+            "value": 2.65
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2021,
+            "value": 1.78
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2021,
+            "value": 3.47
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2022,
+            "value": 5.92
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2022,
+            "value": 3.88
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2022,
+            "value": 3.64
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2022,
+            "value": 1.16
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2022,
+            "value": 2.36
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2022,
+            "value": 5.97
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2022,
+            "value": 4.83
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2022,
+            "value": 13.22
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2022,
+            "value": 4.1
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2022,
+            "value": 1.96
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2022,
+            "value": 9.15
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2022,
+            "value": 3.23
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2022,
+            "value": 4.84
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2022,
+            "value": 0.56
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2022,
+            "value": 1.91
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2022,
+            "value": 1.37
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2022,
+            "value": 4.02
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2022,
+            "value": 4.83
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2023,
+            "value": 1.87
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2023,
+            "value": 3.71
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2023,
+            "value": 3.74
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2023,
+            "value": 7.32
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2023,
+            "value": 3.01
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2023,
+            "value": 3.03
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2023,
+            "value": 3.43
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2023,
+            "value": 10.57
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2023,
+            "value": 3.58
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2023,
+            "value": 1.31
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2023,
+            "value": 2.96
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2023,
+            "value": 1.25
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2023,
+            "value": 3.29
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2023,
+            "value": 1.36
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2023,
+            "value": 2.41
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2023,
+            "value": 2.19
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2023,
+            "value": 3.74
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2023,
+            "value": 2.58
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2024,
+            "value": -2.92
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2024,
+            "value": -0.19
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2024,
+            "value": 3.42
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2024,
+            "value": 3.23
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2024,
+            "value": 0.14
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2024,
+            "value": 1.13
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2024,
+            "value": 5.01
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2024,
+            "value": 4.47
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2024,
+            "value": 2.59
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2024,
+            "value": 3.01
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2024,
+            "value": 1.79
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2024,
+            "value": 1.62
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2024,
+            "value": 2.32
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2024,
+            "value": 2.45
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2024,
+            "value": -1.09
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2024,
+            "value": -0.48
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2024,
+            "value": 1.6
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2024,
+            "value": 0.37
+        },
+        {
+            "indicator_id": 6173,
+            "year": 2025,
+            "value": 6.01
+        },
+        {
+            "indicator_id": 6174,
+            "year": 2025,
+            "value": 1.86
+        },
+        {
+            "indicator_id": 6175,
+            "year": 2025,
+            "value": 4.19
+        },
+        {
+            "indicator_id": 6176,
+            "year": 2025,
+            "value": 6.78
+        },
+        {
+            "indicator_id": 6177,
+            "year": 2025,
+            "value": 0
+        },
+        {
+            "indicator_id": 6178,
+            "year": 2025,
+            "value": 1.6
+        },
+        {
+            "indicator_id": 6179,
+            "year": 2025,
+            "value": 2.97
+        },
+        {
+            "indicator_id": 6180,
+            "year": 2025,
+            "value": 1.45
+        },
+        {
+            "indicator_id": 6181,
+            "year": 2025,
+            "value": 2.65
+        },
+        {
+            "indicator_id": 6182,
+            "year": 2025,
+            "value": 0.86
+        },
+        {
+            "indicator_id": 6183,
+            "year": 2025,
+            "value": 2.9
+        },
+        {
+            "indicator_id": 6184,
+            "year": 2025,
+            "value": 0.04
+        },
+        {
+            "indicator_id": 6185,
+            "year": 2025,
+            "value": 2.93
+        },
+        {
+            "indicator_id": 6186,
+            "year": 2025,
+            "value": 2
+        },
+        {
+            "indicator_id": 6187,
+            "year": 2025,
+            "value": 2.64
+        },
+        {
+            "indicator_id": 6188,
+            "year": 2025,
+            "value": 2.59
+        },
+        {
+            "indicator_id": 6189,
+            "year": 2025,
+            "value": 1.23
+        },
+        {
+            "indicator_id": 6190,
+            "year": 2025,
+            "value": 3.26
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2020,
+            "value": 70.1
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2020,
+            "value": 74.1
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2021,
+            "value": 70.15
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2021,
+            "value": 74.15
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2022,
+            "value": 70.42
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2022,
+            "value": 74.43
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2023,
+            "value": 70.61
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2023,
+            "value": 74.63
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2024,
+            "value": 70.78
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2024,
+            "value": 74.81
+        },
+        {
+            "indicator_id": 6461,
+            "year": 2025,
+            "value": 71.12
+        },
+        {
+            "indicator_id": 6462,
+            "year": 2025,
+            "value": 75.34
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2010,
+            "value": 94.24
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2011,
+            "value": 94.74
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2012,
+            "value": 95.09
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2013,
+            "value": 95.11
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2014,
+            "value": 95.36
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2015,
+            "value": 95.02
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2017,
+            "value": 95.51
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2018,
+            "value": 95.44
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2019,
+            "value": 95.42
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2020,
+            "value": 95.52
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2021,
+            "value": 95.51
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2022,
+            "value": 95.64
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2023,
+            "value": 95.65
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2024,
+            "value": 95.74
+        },
+        {
+            "indicator_id": 6473,
+            "year": 2025,
+            "value": 96.19
+        },
+        {
+            "indicator_id": 6488,
+            "year": 2020,
+            "value": 72.05
+        },
+        {
+            "indicator_id": 6489,
+            "year": 2020,
+            "value": 13.58
+        },
+        {
+            "indicator_id": 6490,
+            "year": 2020,
+            "value": 8.23
+        },
+        {
+            "indicator_id": 6491,
+            "year": 2020,
+            "value": 10923
+        },
+        {
+            "indicator_id": 6492,
+            "year": 2020,
+            "value": 80.08
+        },
+        {
+            "indicator_id": 6493,
+            "year": 2020,
+            "value": 65.16
+        },
+        {
+            "indicator_id": 6494,
+            "year": 2020,
+            "value": 72.83
+        },
+        {
+            "indicator_id": 6495,
+            "year": 2020,
+            "value": 72.43
+        },
+        {
+            "indicator_id": 6488,
+            "year": 2021,
+            "value": 72.1
+        },
+        {
+            "indicator_id": 6489,
+            "year": 2021,
+            "value": 13.59
+        },
+        {
+            "indicator_id": 6490,
+            "year": 2021,
+            "value": 8.24
+        },
+        {
+            "indicator_id": 6491,
+            "year": 2021,
+            "value": 11017
+        },
+        {
+            "indicator_id": 6492,
+            "year": 2021,
+            "value": 80.15
+        },
+        {
+            "indicator_id": 6493,
+            "year": 2021,
+            "value": 65.22
+        },
+        {
+            "indicator_id": 6494,
+            "year": 2021,
+            "value": 73.1
+        },
+        {
+            "indicator_id": 6495,
+            "year": 2021,
+            "value": 72.56
+        },
+        {
+            "indicator_id": 6488,
+            "year": 2022,
+            "value": 72.37
+        },
+        {
+            "indicator_id": 6489,
+            "year": 2022,
+            "value": 13.61
+        },
+        {
+            "indicator_id": 6490,
+            "year": 2022,
+            "value": 8.25
+        },
+        {
+            "indicator_id": 6491,
+            "year": 2022,
+            "value": 11275
+        },
+        {
+            "indicator_id": 6492,
+            "year": 2022,
+            "value": 80.57
+        },
+        {
+            "indicator_id": 6493,
+            "year": 2022,
+            "value": 65.31
+        },
+        {
+            "indicator_id": 6494,
+            "year": 2022,
+            "value": 73.8
+        },
+        {
+            "indicator_id": 6495,
+            "year": 2022,
+            "value": 72.96
+        },
+        {
+            "indicator_id": 6488,
+            "year": 2023,
+            "value": 72.57
+        },
+        {
+            "indicator_id": 6489,
+            "year": 2023,
+            "value": 13.62
+        },
+        {
+            "indicator_id": 6490,
+            "year": 2023,
+            "value": 8.54
+        },
+        {
+            "indicator_id": 6491,
+            "year": 2023,
+            "value": 11712
+        },
+        {
+            "indicator_id": 6492,
+            "year": 2023,
+            "value": 80.88
+        },
+        {
+            "indicator_id": 6493,
+            "year": 2023,
+            "value": 66.3
+        },
+        {
+            "indicator_id": 6494,
+            "year": 2023,
+            "value": 74.97
+        },
+        {
+            "indicator_id": 6495,
+            "year": 2023,
+            "value": 73.8
+        },
+        {
+            "indicator_id": 6488,
+            "year": 2024,
+            "value": 72.75
+        },
+        {
+            "indicator_id": 6489,
+            "year": 2024,
+            "value": 13.63
+        },
+        {
+            "indicator_id": 6490,
+            "year": 2024,
+            "value": 8.8
+        },
+        {
+            "indicator_id": 6491,
+            "year": 2024,
+            "value": 12058
+        },
+        {
+            "indicator_id": 6492,
+            "year": 2024,
+            "value": 81.15
+        },
+        {
+            "indicator_id": 6493,
+            "year": 2024,
+            "value": 67.19
+        },
+        {
+            "indicator_id": 6494,
+            "year": 2024,
+            "value": 75.85
+        },
+        {
+            "indicator_id": 6495,
+            "year": 2024,
+            "value": 74.51
+        },
+        {
+            "indicator_id": 6528,
+            "year": 2022,
+            "value": 3361.63
+        },
+        {
+            "indicator_id": 6533,
+            "year": 2022,
+            "value": 1978.15
+        },
+        {
+            "indicator_id": 6538,
+            "year": 2022,
+            "value": 2128.98
+        },
+        {
+            "indicator_id": 6543,
+            "year": 2022,
+            "value": 1142.38
+        },
+        {
+            "indicator_id": 6548,
+            "year": 2022,
+            "value": 3387.76
+        },
+        {
+            "indicator_id": 6553,
+            "year": 2022,
+            "value": 2208.78
+        },
+        {
+            "indicator_id": 6558,
+            "year": 2022,
+            "value": 8878.37
+        },
+        {
+            "indicator_id": 6563,
+            "year": 2022,
+            "value": 5329.31
+        },
+        {
+            "indicator_id": 6528,
+            "year": 2023,
+            "value": 3346.91
+        },
+        {
+            "indicator_id": 6533,
+            "year": 2023,
+            "value": 2001.96
+        },
+        {
+            "indicator_id": 6538,
+            "year": 2023,
+            "value": 2392.62
+        },
+        {
+            "indicator_id": 6543,
+            "year": 2023,
+            "value": 1202.45
+        },
+        {
+            "indicator_id": 6548,
+            "year": 2023,
+            "value": 3651.67
+        },
+        {
+            "indicator_id": 6553,
+            "year": 2023,
+            "value": 2311.84
+        },
+        {
+            "indicator_id": 6558,
+            "year": 2023,
+            "value": 9391.2
+        },
+        {
+            "indicator_id": 6563,
+            "year": 2023,
+            "value": 5516.25
+        },
+        {
+            "indicator_id": 6528,
+            "year": 2024,
+            "value": 3398.01
+        },
+        {
+            "indicator_id": 6533,
+            "year": 2024,
+            "value": 2088.88
+        },
+        {
+            "indicator_id": 6538,
+            "year": 2024,
+            "value": 2514.36
+        },
+        {
+            "indicator_id": 6543,
+            "year": 2024,
+            "value": 1244.54
+        },
+        {
+            "indicator_id": 6548,
+            "year": 2024,
+            "value": 3978.76
+        },
+        {
+            "indicator_id": 6553,
+            "year": 2024,
+            "value": 2454.95
+        },
+        {
+            "indicator_id": 6558,
+            "year": 2024,
+            "value": 9891.13
+        },
+        {
+            "indicator_id": 6563,
+            "year": 2024,
+            "value": 5788.38
+        },
+        {
+            "indicator_id": 6528,
+            "year": 2025,
+            "value": 3892.99
+        },
+        {
+            "indicator_id": 6533,
+            "year": 2025,
+            "value": 2265.48
+        },
+        {
+            "indicator_id": 6538,
+            "year": 2025,
+            "value": 2663.93
+        },
+        {
+            "indicator_id": 6543,
+            "year": 2025,
+            "value": 1292.88
+        },
+        {
+            "indicator_id": 6548,
+            "year": 2025,
+            "value": 4183.59
+        },
+        {
+            "indicator_id": 6553,
+            "year": 2025,
+            "value": 2528.54
+        },
+        {
+            "indicator_id": 6558,
+            "year": 2025,
+            "value": 10740.51
+        },
+        {
+            "indicator_id": 6563,
+            "year": 2025,
+            "value": 6086.9
+        }
+    ],
+    "publications": [],
+    "indicator_publication": []
+}
