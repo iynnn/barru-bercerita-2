@@ -36,7 +36,7 @@ if ($action === 'list_vars' || $action === 'list-vars') {
         ['id' => 75, 'name' => 'Harapan Lama Sekolah (HLS)'],
     ];
 
-    $apiKey = get_env('BPS_API_KEY', '6f2b04253bc3c59d762755e3f322f550');
+    $apiKey = get_env('BPS_API_KEY', '');
     $domain = $_GET['domain'] ?? get_env('BPS_DOMAIN', '7310');
     $client = new BpsClient($apiKey, $domain);
     try {
@@ -76,7 +76,7 @@ if (!$input) {
     $input = $_POST;
 }
 
-$apiKey = get_env('BPS_API_KEY', '6f2b04253bc3c59d762755e3f322f550');
+$apiKey = get_env('BPS_API_KEY', '');
 $domain = $input['domain'] ?? $_GET['domain'] ?? get_env('BPS_DOMAIN', '7310');
 $client = new BpsClient($apiKey, $domain);
 

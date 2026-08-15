@@ -275,9 +275,15 @@ if ($action === 'ai-interpret') {
             'reset_time' => $now + 300
         ];
     }
-    @file_put_contents($rateFile, json_encode($rateData, JSON_PRETTY_PRINT));
-
-    $geminiApiKey = 'AIzaSyBS0B_ycDVvQSBy_VRlWnSWNYfz8uheCwY';
+    $geminiApiKey = get_env('GEMINI_API_KEY', '');
+    if (empty($geminiApiKey)) {
+        http_response_code(400);
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'GEMINI_API_KEY belum dikonfigurasi di file .env server.'
+        ]);
+        exit();
+    }
     $unitText = !empty($unit) ? " ({$unit})" : "";
 
     $prompt = "Anda adalah Asisten Analis Data Statistik Senior dan Penulis Narasi Kebijakan di BPS (Badan Pusat Statistik) Kabupaten Barru untuk program 'Barru Bercerita'.\n\n" .
