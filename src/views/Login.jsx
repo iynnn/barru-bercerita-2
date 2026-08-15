@@ -1,36 +1,46 @@
 import React, { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Lock, ArrowRight, ShieldAlert, User } from 'lucide-react';
+import { ArrowRight, ShieldAlert, User, Eye, EyeOff } from 'lucide-react';
+import { loginUser } from '../api';
 
 export default function Login() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('admin');
+  const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState('');
   const [error, setError] = useState('');
   const [shake, setShake] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const redirectUrl = searchParams.get('redirect') || '/ManageServices';
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    // Simulasi otentikasi local: username 'admin' & password 'admin'
-    setTimeout(() => {
-      if (username.trim().toLowerCase() === 'admin' && password === 'admin') {
-        localStorage.setItem('authToken', 'mock-mac-desktop-session-token-2026');
+    try {
+      const res = await loginUser(username, password);
+      if (res && res.success) {
+        localStorage.setItem('authToken', res.token || 'auth-token-barru-2026');
+        if (res.user) {
+          localStorage.setItem('user', JSON.stringify(res.user));
+          localStorage.setItem('authUser', JSON.stringify(res.user));
+        }
         navigate(redirectUrl);
       } else {
-        setError('Password atau Username salah. Gunakan admin / admin');
-        setShake(true);
-        setPassword('');
-        setTimeout(() => setShake(false), 500);
+        throw new Error(res.error || 'Username atau password tidak cocok.');
       }
+    } catch (err) {
+      console.error('Login error:', err);
+      setError(err.response?.data?.error || err.message || 'Username atau password salah.');
+      setShake(true);
+      setPassword('');
+      setTimeout(() => setShake(false), 500);
+    } finally {
       setLoading(false);
-    }, 600);
+    }
   };
 
   return (
@@ -57,29 +67,56 @@ export default function Login() {
             className="glass-input"
             style={{ textAlign: 'center' }}
             required
+            autoFocus
           />
 
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
             <input 
-              type="password" 
+              type={showPassword ? 'text' : 'password'} 
               placeholder="Masukkan Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="glass-input"
-              style={{ textAlign: 'center', paddingRight: '2.75rem' }}
+              style={{ textAlign: 'center', paddingRight: '5rem' }}
               required
-              autoFocus
             />
+            
+            {/* Toggle Show/Hide Password */}
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              title={showPassword ? 'Sembunyikan Password' : 'Tampilkan Password'}
+              style={{ 
+                position: 'absolute', 
+                right: '44px', 
+                width: '32px', 
+                height: '32px', 
+                borderRadius: '8px', 
+                background: 'rgba(0,0,0,0.04)', 
+                border: 'none', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                cursor: 'pointer',
+                color: 'var(--text-secondary)'
+              }}
+            >
+              {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
+            </button>
+
+            {/* Submit Button */}
             <button 
               type="submit" 
               disabled={loading}
+              title="Masuk"
               style={{ 
                 position: 'absolute', 
                 right: '8px', 
                 width: '32px', 
                 height: '32px', 
                 borderRadius: '8px', 
-                background: 'rgba(0,0,0,0.05)', 
+                background: 'var(--accent-color, #007aff)', 
+                color: '#ffffff',
                 border: 'none', 
                 display: 'flex', 
                 alignItems: 'center', 
@@ -87,7 +124,7 @@ export default function Login() {
                 cursor: 'pointer' 
               }}
             >
-              <ArrowRight size={14} className={loading ? 'animate-pulse' : ''} />
+              <ArrowRight size={15} className={loading ? 'animate-pulse' : ''} />
             </button>
           </div>
         </form>
@@ -122,10 +159,6 @@ export default function Login() {
             <span>{error}</span>
           </div>
         )}
-
-        <div style={{ marginTop: '2rem', fontSize: '0.65rem', color: 'var(--text-secondary)' }}>
-          Kredensial bawaan: <span style={{ fontWeight: 700 }}>admin / admin</span>
-        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LayoutDashboard, Compass, HelpCircle, ArrowRight } from 'lucide-react';
+import { LayoutDashboard, Compass, HelpCircle, ArrowRight, Clock } from 'lucide-react';
 import tuguImage from '../assets/tugu-payung.png';
 
 export default function LandingPage() {
@@ -36,6 +36,15 @@ export default function LandingPage() {
             </div>
             <h3 className="launcher-title">PST Services</h3>
             <p className="launcher-sub">Portal Layanan Terpadu Online</p>
+          </Link>
+
+          {/* Jadwal Jaga PST */}
+          <Link to="/PstSchedule" className="launcher-card">
+            <div className="launcher-icon-box" style={{ background: 'linear-gradient(135deg, #00b4d8, #007aff)' }}>
+              <Clock size={22} />
+            </div>
+            <h3 className="launcher-title">Jadwal Piket</h3>
+            <p className="launcher-sub">Giliran Jaga PST & Rekomendasi</p>
           </Link>
 
           {/* Guide/Help */}

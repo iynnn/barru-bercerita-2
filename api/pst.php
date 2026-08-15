@@ -2,7 +2,7 @@
 // api/pst.php
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
+header("Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
@@ -13,16 +13,53 @@ require_once __DIR__ . '/config.php';
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-// Secure endpoint check
-if ($method === 'POST' || $method === 'DELETE') {
-    $headers = getallheaders();
-    $auth = $headers['Authorization'] ?? $headers['authorization'] ?? '';
-    // Allow local mock operations
+if ($method === 'GET') {
+    $includeHidden = isset($_GET['admin']) && $_GET['admin'] === '1';
+    $services = get_pst_services($includeHidden);
+    echo json_encode($services);
+    exit();
 }
 
-if ($method === 'GET') {
-    $services = get_pst_services();
-    echo json_encode($services);
+if ($method === 'PATCH') {
+    // Toggle is_hidden for a specific service
+    $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
+    if (!$id) {
+        http_response_code(400);
+        echo json_encode(['error' => 'ID tidak valid.']);
+        exit();
+    }
+
+    $input = json_decode(file_get_contents('php://input'), true) ?? [];
+    $is_hidden = isset($input['is_hidden']) ? (int)$input['is_hidden'] : null;
+
+    if ($is_hidden === null) {
+        http_response_code(400);
+        echo json_encode(['error' => 'Field is_hidden diperlukan.']);
+        exit();
+    }
+
+    $pdo = get_db_connection_safe();
+    if ($pdo) {
+        $stmt = $pdo->prepare("UPDATE integrated_p_s_t_services SET is_hidden = :is_hidden WHERE id = :id");
+        $stmt->execute([':is_hidden' => $is_hidden, ':id' => $id]);
+        $stmt_fresh = $pdo->prepare("SELECT * FROM integrated_p_s_t_services WHERE id = ?");
+        $stmt_fresh->execute([$id]);
+        echo json_encode($stmt_fresh->fetch());
+    } else {
+        // Fallback JSON
+        $pstFile = __DIR__ . '/data/pst_data.json';
+        $all = file_exists($pstFile) ? (json_decode(file_get_contents($pstFile), true) ?? []) : [];
+        $found = null;
+        foreach ($all as &$item) {
+            if ((int)$item['id'] === $id) {
+                $item['is_hidden'] = $is_hidden;
+                $found = $item;
+                break;
+            }
+        }
+        file_put_contents($pstFile, json_encode($all, JSON_PRETTY_PRINT));
+        echo json_encode($found);
+    }
     exit();
 }
 
@@ -53,7 +90,7 @@ if ($method === 'POST') {
             $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
             $dest_path = $uploadDir . $newFileName;
 
-            if(move_uploaded_file($fileTmpPath, $dest_path)) {
+            if (move_uploaded_file($fileTmpPath, $dest_path)) {
                 $logoUrl = 'api/uploads/logos/' . $newFileName;
             }
         }
@@ -66,7 +103,7 @@ if ($method === 'POST') {
     }
 
     $service = save_pst_service($id, $title, $url, $description, $logoUrl, $themeClass);
-    
+
     if ($isUpdate) {
         echo json_encode($service);
     } else {

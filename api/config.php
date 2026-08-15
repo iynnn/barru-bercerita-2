@@ -39,43 +39,64 @@ function get_db_connection_safe() {
     if ($pdo_conn) return $pdo_conn;
     if ($db_fallback_active) return null;
 
-    $configs = [
+    $db_name = DB_NAME;
+    $envHost = get_env('DB_HOST');
+    $envUser = get_env('DB_USERNAME');
+    $envPass = get_env('DB_PASSWORD');
+    $envPort = get_env('DB_PORT', '3306');
+
+    $configs = [];
+
+    // Prioritaskan environment variables jika dikonfigurasi di cPanel / .env
+    if ($envHost || $envUser !== null) {
+        $configs[] = [
+            'host' => $envHost ?: 'localhost',
+            'port' => $envPort ?: '3306',
+            'user' => $envUser ?: 'root',
+            'pass' => $envPass ?? ''
+        ];
+    }
+
+    // Default fallback configurations (MAMP/XAMPP/Localhost)
+    $configs = array_merge($configs, [
         ['host' => '127.0.0.1', 'port' => '8889', 'user' => 'root', 'pass' => 'root'],
         ['host' => 'localhost', 'port' => '8889', 'user' => 'root', 'pass' => 'root'],
         ['host' => '127.0.0.1', 'port' => '3306', 'user' => 'root', 'pass' => ''],
         ['host' => 'localhost', 'port' => '3306', 'user' => 'root', 'pass' => ''],
         ['host' => '127.0.0.1', 'port' => '3306', 'user' => 'root', 'pass' => 'root'],
         ['host' => 'localhost', 'port' => '3306', 'user' => 'root', 'pass' => 'root']
-    ];
-
-    $envHost = get_env('DB_HOST');
-    if ($envHost) {
-        array_unshift($configs, [
-            'host' => $envHost,
-            'port' => get_env('DB_PORT', '3306'),
-            'user' => get_env('DB_USERNAME', 'root'),
-            'pass' => get_env('DB_PASSWORD', '')
-        ]);
-    }
+    ]);
 
     foreach ($configs as $config) {
         try {
-            $dsn = "mysql:host={$config['host']};port={$config['port']};charset=utf8mb4";
-            $pdo = new PDO($dsn, $config['user'], $config['pass'], [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_TIMEOUT => 1 // Fast timeout to trigger fallback quickly
-            ]);
-            
-            $db_name = DB_NAME;
-            $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db_name` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-            $pdo->exec("USE `$db_name`");
-            
-            // Buat tabel jika belum ada
-            create_tables_if_not_exist($pdo);
-            clean_duplicate_indicators($pdo);
-            $pdo_conn = $pdo;
-            return $pdo;
+            $pdo = null;
+            // 1. Coba konek langsung ke database yang sudah dibuat (Standar cPanel)
+            try {
+                $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$db_name};charset=utf8mb4";
+                $pdo = new PDO($dsn, $config['user'], $config['pass'], [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_TIMEOUT => 2
+                ]);
+            } catch (PDOException $e) {
+                // 2. Jika DB belum ada (lingkungan lokal), konek tanpa dbname lalu CREATE DATABASE
+                $dsn = "mysql:host={$config['host']};port={$config['port']};charset=utf8mb4";
+                $pdo = new PDO($dsn, $config['user'], $config['pass'], [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_TIMEOUT => 2
+                ]);
+                $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db_name` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+                $pdo->exec("USE `$db_name`");
+            }
+
+            if ($pdo) {
+                // Buat tabel jika belum ada
+                create_tables_if_not_exist($pdo);
+                seed_mysql_from_json_if_empty($pdo);
+                $pdo_conn = $pdo;
+                return $pdo;
+            }
         } catch (PDOException $e) {
             // Coba config selanjutnya
         }
@@ -188,10 +209,301 @@ function create_tables_if_not_exist($pdo) {
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     ");
 
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS users (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(50) NOT NULL UNIQUE,
+            password VARCHAR(255) NOT NULL,
+            name VARCHAR(100) NOT NULL,
+            role VARCHAR(20) DEFAULT 'admin',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // Seed / update admin user in DB
+    $defaultUser = 'admin_barru';
+    $defaultPassHash = password_hash('iyatawwa10', PASSWORD_BCRYPT);
+
+    $userCount = $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
+    if ($userCount == 0) {
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, name, role) VALUES (?, ?, ?, ?)");
+        $stmt->execute([$defaultUser, $defaultPassHash, 'Administrator Barru', 'admin']);
+    } else {
+        // Update password if admin_barru already exists
+        $stmt = $pdo->prepare("UPDATE users SET password = ? WHERE username = ?");
+        $stmt->execute([$defaultPassHash, $defaultUser]);
+    }
+
     // Seed regions
     $count = $pdo->query("SELECT COUNT(*) FROM regions")->fetchColumn();
     if ($count == 0) {
         $pdo->exec("INSERT INTO regions (id, code, name) VALUES (1, '7310', 'Kabupaten Barru')");
+    }
+
+    // Migration: add is_hidden column to integrated_p_s_t_services if not exists
+    try {
+        $cols = $pdo->query("SHOW COLUMNS FROM integrated_p_s_t_services LIKE 'is_hidden'")->fetchAll();
+        if (empty($cols)) {
+            $pdo->exec("ALTER TABLE integrated_p_s_t_services ADD COLUMN is_hidden TINYINT(1) NOT NULL DEFAULT 0 AFTER theme_class");
+        }
+    } catch (Exception $e) { /* ignore */ }
+
+    // Migration: add officer_id column to users table if not exists
+    try {
+        $colsUser = $pdo->query("SHOW COLUMNS FROM users LIKE 'officer_id'")->fetchAll();
+        if (empty($colsUser)) {
+            $pdo->exec("ALTER TABLE users ADD COLUMN officer_id INT NULL AFTER role");
+        }
+    } catch (Exception $e) { /* ignore */ }
+
+    // Migration: add pool_type column to pst_officers table if not exists (K = PST, P = Pengaduan, R = Rekomendasi)
+    try {
+        $colsPool = $pdo->query("SHOW COLUMNS FROM pst_officers LIKE 'pool_type'")->fetchAll();
+        if (empty($colsPool)) {
+            $pdo->exec("ALTER TABLE pst_officers ADD COLUMN pool_type VARCHAR(10) NOT NULL DEFAULT 'K' AFTER position");
+        }
+        // Ensure default seeded officers have correct team pool_type
+        $pdo->exec("UPDATE pst_officers SET pool_type = 'P' WHERE id IN (10, 11, 12)");
+        $pdo->exec("UPDATE pst_officers SET pool_type = 'R' WHERE id IN (13, 14, 15)");
+        $pdo->exec("UPDATE pst_officers SET pool_type = 'K' WHERE id BETWEEN 1 AND 9");
+    } catch (Exception $e) { /* ignore */ }
+
+    // PST Officers table
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS pst_officers (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(150) NOT NULL,
+            nip VARCHAR(50) NULL,
+            position VARCHAR(150) NULL,
+            pool_type VARCHAR(10) NOT NULL DEFAULT 'K',
+            phone VARCHAR(30) NULL,
+            avatar VARCHAR(255) NULL,
+            is_active TINYINT(1) DEFAULT 1,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // PST Schedules table
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS pst_schedules (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            date DATE NOT NULL,
+            k1_officer_id INT NULL,
+            k2_officer_id INT NULL,
+            p_officer_id INT NULL,
+            r_officer_id INT NULL,
+            note VARCHAR(255) NULL,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            UNIQUE KEY unique_date (date)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // PST Presensi / Attendance Table
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS pst_presensi (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            date DATE NOT NULL,
+            officer_id INT NOT NULL,
+            role_code VARCHAR(10) NOT NULL,
+            check_in_time VARCHAR(10) NOT NULL,
+            status VARCHAR(20) DEFAULT 'hadir',
+            notes TEXT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE KEY unique_officer_day_role (date, officer_id, role_code)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // PST Holidays / National Days Off Table
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS pst_holidays (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            date DATE NOT NULL,
+            title VARCHAR(255) NOT NULL,
+            type VARCHAR(50) DEFAULT 'national_holiday',
+            description TEXT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            UNIQUE KEY unique_holiday_date (date)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // PST Swap Requests Table (Shift Swap between officers)
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS pst_swap_requests (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            requester_id INT NOT NULL,
+            target_officer_id INT NOT NULL,
+            requester_date DATE NOT NULL,
+            requester_role VARCHAR(10) NOT NULL,
+            target_date DATE NOT NULL,
+            target_role VARCHAR(10) NOT NULL,
+            reason TEXT NULL,
+            status VARCHAR(30) DEFAULT 'pending_user2',
+            rejected_by VARCHAR(50) NULL,
+            rejection_reason TEXT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ");
+
+    // Seed default national holidays for 2026 if empty
+    $holidayCount = $pdo->query("SELECT COUNT(*) FROM pst_holidays")->fetchColumn();
+    if ($holidayCount == 0) {
+        $defaultHolidays = [
+            ['2026-01-01', 'Tahun Baru 2026 Masehi', 'national_holiday'],
+            ['2026-01-16', 'Isra Mikraj Nabi Muhammad SAW', 'national_holiday'],
+            ['2026-02-17', 'Tahun Baru Imlek 2577 Kongzili', 'national_holiday'],
+            ['2026-03-19', 'Hari Suci Nyepi (Tahun Baru Saka 1948)', 'national_holiday'],
+            ['2026-03-20', 'Hari Raya Idul Fitri 1447 Hijriah', 'national_holiday'],
+            ['2026-03-21', 'Hari Raya Idul Fitri 1447 Hijriah', 'national_holiday'],
+            ['2026-04-03', 'Wafat Yesus Kristus', 'national_holiday'],
+            ['2026-04-05', 'Hari Paskah (Kebangkitan Yesus Kristus)', 'national_holiday'],
+            ['2026-05-01', 'Hari Buruh Internasional', 'national_holiday'],
+            ['2026-05-14', 'Kenaikan Yesus Kristus', 'national_holiday'],
+            ['2026-05-27', 'Hari Raya Idul Adha 1447 Hijriah', 'national_holiday'],
+            ['2026-05-31', 'Hari Raya Waisak 2570 BE', 'national_holiday'],
+            ['2026-06-01', 'Hari Lahir Pancasila', 'national_holiday'],
+            ['2026-06-16', 'Tahun Baru Islam 1448 Hijriah', 'national_holiday'],
+            ['2026-08-17', 'Hari Kemerdekaan Republik Indonesia', 'national_holiday'],
+            ['2026-08-25', 'Maulid Nabi Muhammad SAW', 'national_holiday'],
+            ['2026-12-25', 'Hari Raya Natal', 'national_holiday']
+        ];
+        $stmtH = $pdo->prepare("INSERT IGNORE INTO pst_holidays (date, title, type) VALUES (?, ?, ?)");
+        foreach ($defaultHolidays as $h) {
+            $stmtH->execute($h);
+        }
+    }
+
+    // Seed default officers if empty
+    $officerCount = $pdo->query("SELECT COUNT(*) FROM pst_officers")->fetchColumn();
+    if ($officerCount == 0) {
+        $defaultOfficers = [
+            // Tim K (Konsultasi PST)
+            ['Muhamad Feriyanto', '19950815 202012 1 001', 'Pranata Komputer / Tim IT', 'K', '081234567890'],
+            ['Ahmad Ridwan, S.St', '19880410 201201 1 002', 'Statistisi Ahli Muda', 'K', '081234567891'],
+            ['Nurul Hidayah, S.Si', '19920314 201502 2 003', 'Statistisi Pertama', 'K', '081234567892'],
+            ['Andi Baso, S.Sos', '19850620 200903 1 004', 'Pengelola PST & Layanan', 'K', '081234567893'],
+            ['Rahmawati, S.E.', '19901105 201402 2 005', 'Statistisi Ahli', 'K', '081234567894'],
+            ['Muhammad Nur, A.Md', '19960712 201901 1 006', 'Asisten Statistisi', 'K', '081234567895'],
+            ['Sri Wahyuni, S.Stat', '19940918 201802 2 007', 'Statistisi Pertama', 'K', '081234567896'],
+            ['Hidayatullah, S.T.', '19910125 201601 1 008', 'Pranata Komputer Ahli', 'K', '081234567897'],
+            ['Resky Aulia, S.Tr.Stat', '19970512 202102 2 009', 'Statistisi Ahli Pertama', 'K', '081234567898'],
+
+            // Tim P (Pengaduan)
+            ['Ir. Hj. St. Nurbaya', '19680315 199302 2 001', 'Penanggung Jawab Pengaduan', 'P', '081234567899'],
+            ['Hasmawati, S.A.P.', '19830510 200801 2 002', 'Petugas Pengaduan & Aspirasi', 'P', '081234567800'],
+            ['Bachtiar, S.H.', '19800720 200604 1 003', 'Petugas Layanan Hukum & Pengaduan', 'P', '081234567801'],
+
+            // Tim R (Rekomendasi Statistik)
+            ['Dr. Hardiansyah, S.Si., M.Si.', '19750918 199903 1 001', 'Koordinator Rekomendasi Kegiatan', 'R', '081234567802'],
+            ['Fitriani, S.Stat.', '19931205 201602 2 002', 'Pemeriksa Rekomendasi Statistik', 'R', '081234567803'],
+            ['Lukman Hakim, S.T.', '19890214 201301 1 003', 'Analisis & Rekomendasi Data', 'R', '081234567804']
+        ];
+        $stmtOff = $pdo->prepare("INSERT INTO pst_officers (name, nip, position, pool_type, phone) VALUES (?, ?, ?, ?, ?)");
+        foreach ($defaultOfficers as $off) {
+            $stmtOff->execute($off);
+        }
+    }
+
+    // Seed officer user accounts if not created yet
+    $allOff = $pdo->query("SELECT id, name FROM pst_officers")->fetchAll();
+    $stmtCheckUser = $pdo->prepare("SELECT id FROM users WHERE officer_id = ? OR username = ?");
+    $stmtInsUser = $pdo->prepare("INSERT INTO users (username, password, name, role, officer_id) VALUES (?, ?, ?, 'officer', ?)");
+    $defaultPassHash = password_hash('iyatawwa10', PASSWORD_BCRYPT);
+
+    foreach ($allOff as $o) {
+        // Generate simple username e.g. "feriyanto", "ridwan", "nurul", "andibaso"
+        $parts = explode(' ', strtolower(preg_replace('/[^a-zA-Z ]/', '', $o['name'])));
+        $uname = $parts[0];
+        if (strlen($uname) < 3 && isset($parts[1])) $uname = $parts[0] . $parts[1];
+
+        $stmtCheckUser->execute([$o['id'], $uname]);
+        if (!$stmtCheckUser->fetchColumn()) {
+            $stmtInsUser->execute([$uname, $defaultPassHash, $o['name'], $o['id']]);
+        }
+    }
+}
+
+/**
+ * Seed MySQL database from local bps_data.json if MySQL indicators table is empty
+ */
+function seed_mysql_from_json_if_empty($pdo) {
+    if (!$pdo) return;
+    try {
+        $valCount = $pdo->query("SELECT COUNT(*) FROM indicator_values")->fetchColumn();
+        if ($valCount > 100) return; // DB already contains complete historical data
+
+        $bpsFile = __DIR__ . '/data/bps_data.json';
+        if (!file_exists($bpsFile)) return;
+
+        $json = json_decode(file_get_contents($bpsFile), true);
+        if (empty($json)) return;
+
+        $pdo->beginTransaction();
+
+        // 1. Seed categories
+        if (!empty($json['categories'])) {
+            $stmtCat = $pdo->prepare("INSERT IGNORE INTO categories (id, name, description) VALUES (:id, :name, :description)");
+            foreach ($json['categories'] as $cat) {
+                $stmtCat->execute([
+                    ':id' => $cat['id'],
+                    ':name' => $cat['name'],
+                    ':description' => $cat['description'] ?? null
+                ]);
+            }
+        }
+
+        // 2. Seed data_tables
+        if (!empty($json['data_tables'])) {
+            $stmtTbl = $pdo->prepare("INSERT IGNORE INTO data_tables (bps_var_id, name) VALUES (:bps_var_id, :name)");
+            foreach ($json['data_tables'] as $tbl) {
+                $stmtTbl->execute([
+                    ':bps_var_id' => $tbl['bps_var_id'],
+                    ':name' => $tbl['name']
+                ]);
+            }
+        }
+
+        // 3. Seed indicators
+        if (!empty($json['indicators'])) {
+            $stmtInd = $pdo->prepare("
+                INSERT IGNORE INTO indicators (id, category_id, bps_var_id, bps_vervar_id, bps_turvar_id, name, description, unit) 
+                VALUES (:id, :category_id, :bps_var_id, :bps_vervar_id, :bps_turvar_id, :name, :description, :unit)
+            ");
+            foreach ($json['indicators'] as $ind) {
+                $stmtInd->execute([
+                    ':id' => $ind['id'],
+                    ':category_id' => $ind['category_id'] ?? 1,
+                    ':bps_var_id' => $ind['bps_var_id'] ?? null,
+                    ':bps_vervar_id' => $ind['bps_vervar_id'] ?? null,
+                    ':bps_turvar_id' => $ind['bps_turvar_id'] ?? null,
+                    ':name' => $ind['name'],
+                    ':description' => $ind['description'] ?? null,
+                    ':unit' => $ind['unit'] ?? null
+                ]);
+            }
+        }
+
+        // 4. Seed indicator_values
+        if (!empty($json['values'])) {
+            $stmtVal = $pdo->prepare("
+                INSERT IGNORE INTO indicator_values (indicator_id, region_id, year, value) 
+                VALUES (:indicator_id, 1, :year, :value)
+            ");
+            foreach ($json['values'] as $val) {
+                $stmtVal->execute([
+                    ':indicator_id' => $val['indicator_id'],
+                    ':year' => $val['year'],
+                    ':value' => $val['value']
+                ]);
+            }
+        }
+
+        $pdo->commit();
+    } catch (Exception $e) {
+        if ($pdo && $pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
     }
 }
 
@@ -203,6 +515,18 @@ function seed_initial_json_data() {
     if (!is_dir($dataDir)) {
         mkdir($dataDir, 0755, true);
     }
+
+    $usersFile = $dataDir . '/users.json';
+    $defaultUsers = [
+        [
+            'id' => 1,
+            'username' => 'admin_barru',
+            'password' => password_hash('iyatawwa10', PASSWORD_BCRYPT),
+            'name' => 'Administrator Barru',
+            'role' => 'admin'
+        ]
+    ];
+    file_put_contents($usersFile, json_encode($defaultUsers, JSON_PRETTY_PRINT));
 
     $bpsFile = $dataDir . '/bps_data.json';
     if (!file_exists($bpsFile)) {
@@ -313,36 +637,44 @@ function seed_initial_json_data() {
 // UNIFIED DATA SERVICE (MySQL vs JSON Fallback Wrapper)
 // -------------------------------------------------------------
 
-function get_pst_services() {
+function get_pst_services($include_hidden = false) {
     $pdo = get_db_connection_safe();
     if ($pdo) {
-        return $pdo->query("SELECT * FROM integrated_p_s_t_services ORDER BY created_at DESC")->fetchAll();
+        if ($include_hidden) {
+            return $pdo->query("SELECT * FROM integrated_p_s_t_services ORDER BY created_at DESC")->fetchAll();
+        }
+        return $pdo->query("SELECT * FROM integrated_p_s_t_services WHERE is_hidden = 0 ORDER BY created_at DESC")->fetchAll();
     }
     // Fallback JSON
     $pstFile = __DIR__ . '/data/pst_data.json';
     if (file_exists($pstFile)) {
-        return json_decode(file_get_contents($pstFile), true);
+        $all = json_decode(file_get_contents($pstFile), true) ?? [];
+        if ($include_hidden) return $all;
+        return array_values(array_filter($all, fn($s) => empty($s['is_hidden'])));
     }
     return [];
 }
 
-function save_pst_service($id, $title, $url, $description, $logo, $theme_class) {
+function save_pst_service($id, $title, $url, $description, $logo, $theme_class, $is_hidden = null) {
     $pdo = get_db_connection_safe();
     if ($pdo) {
         if ($id) {
+            $hiddenClause = $is_hidden !== null ? ', is_hidden = :is_hidden' : '';
             $stmt = $pdo->prepare("
                 UPDATE integrated_p_s_t_services 
-                SET title = :title, url = :url, description = :description, logo = COALESCE(:logo, logo), theme_class = :theme_class 
+                SET title = :title, url = :url, description = :description, logo = COALESCE(:logo, logo), theme_class = :theme_class{$hiddenClause}
                 WHERE id = :id
             ");
-            $stmt->execute([
+            $params = [
                 ':title' => $title,
                 ':url' => $url,
                 ':description' => $description,
                 ':logo' => $logo,
                 ':theme_class' => $theme_class,
                 ':id' => $id
-            ]);
+            ];
+            if ($is_hidden !== null) $params[':is_hidden'] = (int)$is_hidden;
+            $stmt->execute($params);
             $stmt_fresh = $pdo->prepare("SELECT * FROM integrated_p_s_t_services WHERE id = ?");
             $stmt_fresh->execute([$id]);
             return $stmt_fresh->fetch();
@@ -808,9 +1140,155 @@ function get_dashboard_widgets() {
 }
 
 /**
+ * CRUD Functions for Dataset Indicators
+ */
+function get_all_indicators_for_crud() {
+    $pdo = get_db_connection_safe();
+    if ($pdo) {
+        seed_mysql_from_json_if_empty($pdo);
+        $stmt = $pdo->query("
+            SELECT 
+                i.id, 
+                i.bps_var_id, 
+                i.name, 
+                i.unit, 
+                i.description,
+                i.updated_at as updated_at,
+                dt.name as table_name,
+                c.name as category_name,
+                COUNT(iv.id) as value_count,
+                MIN(iv.year) as min_year,
+                MAX(iv.year) as max_year,
+                MAX(iv.updated_at) as last_synced_at
+            FROM indicators i
+            LEFT JOIN data_tables dt ON i.bps_var_id = dt.bps_var_id
+            LEFT JOIN categories c ON i.category_id = c.id
+            LEFT JOIN indicator_values iv ON i.id = iv.indicator_id
+            GROUP BY i.id
+            ORDER BY i.id DESC
+        ");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // JSON Fallback
+    $bpsFile = __DIR__ . '/data/bps_data.json';
+    if (file_exists($bpsFile)) {
+        $data = json_decode(file_get_contents($bpsFile), true);
+        $tables = $data['data_tables'] ?? [];
+        $categories = $data['categories'] ?? [];
+        $indicators = $data['indicators'] ?? [];
+        $values = $data['values'] ?? [];
+
+        $result = [];
+        foreach ($indicators as $ind) {
+            $table = array_values(array_filter($tables, fn($t) => (int)($t['bps_var_id'] ?? 0) === (int)($ind['bps_var_id'] ?? 0)))[0] ?? null;
+            $cat = array_values(array_filter($categories, fn($c) => (int)($c['id'] ?? 0) === (int)($ind['category_id'] ?? 0)))[0] ?? null;
+            $indVals = array_values(array_filter($values, fn($v) => (int)$v['indicator_id'] === (int)$ind['id']));
+            $years = array_map(fn($v) => (int)$v['year'], $indVals);
+
+            $result[] = [
+                'id' => (int)$ind['id'],
+                'bps_var_id' => $ind['bps_var_id'] ?? null,
+                'name' => $ind['name'],
+                'unit' => $ind['unit'] ?? '',
+                'description' => $ind['description'] ?? '',
+                'table_name' => $table['name'] ?? 'Indikator Kategori',
+                'category_name' => $cat['name'] ?? 'Umum',
+                'value_count' => count($indVals),
+                'min_year' => $years ? min($years) : null,
+                'max_year' => $years ? max($years) : null
+            ];
+        }
+        usort($result, fn($a, $b) => $b['id'] <=> $a['id']);
+        return $result;
+    }
+    return [];
+}
+
+function save_indicator_item($data) {
+    $pdo = get_db_connection_safe();
+    $id = isset($data['id']) && !empty($data['id']) ? (int)$data['id'] : null;
+    $name = trim($data['name'] ?? '');
+    $unit = trim($data['unit'] ?? '');
+    $description = trim($data['description'] ?? '');
+
+    if (empty($name)) {
+        throw new Exception('Nama indikator wajib diisi.');
+    }
+
+    if ($pdo) {
+        if ($id) {
+            $stmt = $pdo->prepare("UPDATE indicators SET name = :name, unit = :unit, description = :description WHERE id = :id");
+            $stmt->execute([':name' => $name, ':unit' => $unit, ':description' => $description, ':id' => $id]);
+        } else {
+            $stmt = $pdo->prepare("INSERT INTO indicators (category_id, bps_var_id, name, unit, description) VALUES (1, 81, :name, :unit, :description)");
+            $stmt->execute([':name' => $name, ':unit' => $unit, ':description' => $description]);
+        }
+        return true;
+    }
+
+    // JSON Fallback
+    $bpsFile = __DIR__ . '/data/bps_data.json';
+    if (file_exists($bpsFile)) {
+        $json = json_decode(file_get_contents($bpsFile), true);
+        if ($id) {
+            foreach ($json['indicators'] as &$ind) {
+                if ((int)$ind['id'] === $id) {
+                    $ind['name'] = $name;
+                    $ind['unit'] = $unit;
+                    $ind['description'] = $description;
+                    break;
+                }
+            }
+            unset($ind);
+        } else {
+            $maxId = 0;
+            foreach ($json['indicators'] as $ind) {
+                if ($ind['id'] > $maxId) $maxId = $ind['id'];
+            }
+            $json['indicators'][] = [
+                'id' => $maxId + 1,
+                'category_id' => 81,
+                'bps_var_id' => 81,
+                'name' => $name,
+                'unit' => $unit,
+                'description' => $description
+            ];
+        }
+        file_put_contents($bpsFile, json_encode($json, JSON_PRETTY_PRINT));
+        return true;
+    }
+    return false;
+}
+
+function delete_indicator_item($id) {
+    $pdo = get_db_connection_safe();
+    $id = (int)$id;
+    if (!$id) return false;
+
+    if ($pdo) {
+        $pdo->prepare("DELETE FROM indicator_values WHERE indicator_id = ?")->execute([$id]);
+        $pdo->prepare("DELETE FROM indicators WHERE id = ?")->execute([$id]);
+        return true;
+    }
+
+    // JSON Fallback
+    $bpsFile = __DIR__ . '/data/bps_data.json';
+    if (file_exists($bpsFile)) {
+        $json = json_decode(file_get_contents($bpsFile), true);
+        $json['indicators'] = array_values(array_filter($json['indicators'] ?? [], fn($i) => (int)$i['id'] !== $id));
+        $json['values'] = array_values(array_filter($json['values'] ?? [], fn($v) => (int)$v['indicator_id'] !== $id));
+        file_put_contents($bpsFile, json_encode($json, JSON_PRETTY_PRINT));
+        return true;
+    }
+    return false;
+}
+
+/**
  * Cleanup duplicate indicators and merge values in MySQL
  */
 function clean_duplicate_indicators($pdo) {
+    if (!$pdo) return;
     try {
         // 1. Delete duplicate values that would cause key collisions during update
         $pdo->exec("
@@ -819,18 +1297,20 @@ function clean_duplicate_indicators($pdo) {
             JOIN indicators i1 ON iv1.indicator_id = i1.id
             JOIN indicators i2 ON iv2.indicator_id = i2.id
             WHERE i2.id < i1.id
-              AND i1.bps_var_id = i2.bps_var_id
-              AND (i1.bps_vervar_id = i2.bps_vervar_id OR (i1.bps_vervar_id IS NULL AND i2.bps_vervar_id IS NULL))
-              AND (i1.bps_turvar_id = i2.bps_turvar_id OR (i1.bps_turvar_id IS NULL AND i2.bps_turvar_id IS NULL))
+              AND (
+                (i1.bps_var_id IS NOT NULL AND i1.bps_var_id = i2.bps_var_id AND COALESCE(i1.bps_vervar_id, 0) = COALESCE(i2.bps_vervar_id, 0) AND COALESCE(i1.bps_turvar_id, 0) = COALESCE(i2.bps_turvar_id, 0))
+                OR (i1.category_id = i2.category_id AND i1.name = i2.name)
+              )
         ");
 
-        // 2. Update remaining values to point to the lowest matched indicator ID
+        // 2. Update remaining values to point to lowest indicator ID
         $pdo->exec("
             UPDATE indicator_values iv
             JOIN indicators i1 ON iv.indicator_id = i1.id
-            JOIN indicators i2 ON i1.bps_var_id = i2.bps_var_id 
-              AND (i1.bps_vervar_id = i2.bps_vervar_id OR (i1.bps_vervar_id IS NULL AND i2.bps_vervar_id IS NULL))
-              AND (i1.bps_turvar_id = i2.bps_turvar_id OR (i1.bps_turvar_id IS NULL AND i2.bps_turvar_id IS NULL))
+            JOIN indicators i2 ON (
+                (i1.bps_var_id IS NOT NULL AND i1.bps_var_id = i2.bps_var_id AND COALESCE(i1.bps_vervar_id, 0) = COALESCE(i2.bps_vervar_id, 0) AND COALESCE(i1.bps_turvar_id, 0) = COALESCE(i2.bps_turvar_id, 0))
+                OR (i1.category_id = i2.category_id AND i1.name = i2.name)
+            )
             SET iv.indicator_id = i2.id
             WHERE i2.id < i1.id
         ");
@@ -838,9 +1318,10 @@ function clean_duplicate_indicators($pdo) {
         // 3. Delete duplicate indicator records
         $pdo->exec("
             DELETE i1 FROM indicators i1
-            JOIN indicators i2 ON i1.bps_var_id = i2.bps_var_id 
-              AND (i1.bps_vervar_id = i2.bps_vervar_id OR (i1.bps_vervar_id IS NULL AND i2.bps_vervar_id IS NULL))
-              AND (i1.bps_turvar_id = i2.bps_turvar_id OR (i1.bps_turvar_id IS NULL AND i2.bps_turvar_id IS NULL))
+            JOIN indicators i2 ON (
+                (i1.bps_var_id IS NOT NULL AND i1.bps_var_id = i2.bps_var_id AND COALESCE(i1.bps_vervar_id, 0) = COALESCE(i2.bps_vervar_id, 0) AND COALESCE(i1.bps_turvar_id, 0) = COALESCE(i2.bps_turvar_id, 0))
+                OR (i1.category_id = i2.category_id AND i1.name = i2.name)
+            )
             WHERE i1.id > i2.id
         ");
     } catch (Exception $e) {
@@ -861,7 +1342,9 @@ function clean_json_duplicates() {
     $idMapping = [];
 
     foreach ($data['indicators'] as $ind) {
-        $key = $ind['bps_var_id'] . '_' . ($ind['bps_vervar_id'] ?? 'null') . '_' . ($ind['bps_turvar_id'] ?? 'null');
+        $cleanName = trim(mb_strtolower($ind['name'] ?? ''));
+        $key = ($ind['category_id'] ?? 0) . '_' . ($ind['bps_var_id'] ?? 'null') . '_' . ($ind['bps_vervar_id'] ?? 'null') . '_' . ($ind['bps_turvar_id'] ?? 'null') . '_' . $cleanName;
+
         if (!isset($uniqueInds[$key])) {
             $uniqueInds[$key] = $ind;
             $idMapping[$ind['id']] = $ind['id'];

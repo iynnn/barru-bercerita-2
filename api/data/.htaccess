@@ -1,0 +1,3 @@
+# Protect internal JSON database backup files from direct web access
+Order deny,allow
+Deny from all

@@ -80,7 +80,7 @@ export default function SearchableMultiSelect({
       {/* Floating Dropdown Panel */}
       {isOpen && (
         <div
-          className="glass-card"
+          className="glass-card searchable-select-dropdown"
           style={{
             position: 'absolute',
             top: '105%',
@@ -88,7 +88,6 @@ export default function SearchableMultiSelect({
             zIndex: 9999, // Super high z-index to stay on top
             padding: '0.85rem',
             boxShadow: '0 16px 48px rgba(0, 0, 0, 0.15)',
-            background: '#ffffff', // Solid white to prevent text bleed-through
             border: '1px solid rgba(0, 0, 0, 0.12)',
             borderRadius: '16px',
             maxHeight: '300px',

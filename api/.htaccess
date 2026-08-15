@@ -1,0 +1,23 @@
+# Allow PHP files in api/ to execute directly (no rewrite from parent)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /barru_bercerita/api/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /barru_bercerita/api/ [L]
+</IfModule>
+
+# Protect internal data files
+<FilesMatch "\.(json|sql|log|lock|env|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow PHP files
+<FilesMatch "\.php$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# No directory listing
+Options -Indexes

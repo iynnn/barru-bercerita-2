@@ -1,0 +1,27 @@
+# Apache Configuration for Single Page Application (SPA) in /barru_bercerita/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /barru_bercerita/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /barru_bercerita/index.html [L]
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "\.(env|env\.example|gitignore|sql|lock|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

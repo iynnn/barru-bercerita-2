@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ExternalLink, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Search, ExternalLink, Loader2, Clock } from 'lucide-react';
 import { fetchServices, API_BASE } from '../api';
 
 export default function IntegratedPST() {
@@ -74,16 +75,23 @@ export default function IntegratedPST() {
           <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Akses cepat seluruh layanan terpadu (PST) online resmi BPS Kabupaten Barru.</p>
         </div>
 
-        <div style={{ position: 'relative', width: '300px' }}>
-          <Search size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }} />
-          <input
-            type="text"
-            placeholder="Cari layanan online..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="glass-input"
-            style={{ paddingLeft: '2.5rem', borderRadius: '99px' }}
-          />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link to="/PstSchedule" className="glass-btn glass-btn-primary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem' }}>
+            <Clock size={15} />
+            <span>Lihat Jadwal Piket PST</span>
+          </Link>
+
+          <div style={{ position: 'relative', width: '260px' }}>
+            <Search size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }} />
+            <input
+              type="text"
+              placeholder="Cari layanan online..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="glass-input"
+              style={{ paddingLeft: '2.5rem', borderRadius: '99px' }}
+            />
+          </div>
         </div>
       </div>
 

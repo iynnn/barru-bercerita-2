@@ -17,7 +17,7 @@ require_once __DIR__ . '/BpsClient.php';
 
 // Endpoint to fetch variables list for search/dropdown
 $action = $_GET['action'] ?? '';
-if ($action === 'list-vars') {
+if ($action === 'list_vars' || $action === 'list-vars') {
     $cacheFile = __DIR__ . '/data/bps_variables_cache.json';
     if (file_exists($cacheFile)) {
         echo file_get_contents($cacheFile);
@@ -36,8 +36,8 @@ if ($action === 'list-vars') {
         ['id' => 75, 'name' => 'Harapan Lama Sekolah (HLS)'],
     ];
 
-    $apiKey = '6f2b04253bc3c59d762755e3f322f550';
-    $domain = $_GET['domain'] ?? '7310';
+    $apiKey = get_env('BPS_API_KEY', '6f2b04253bc3c59d762755e3f322f550');
+    $domain = $_GET['domain'] ?? get_env('BPS_DOMAIN', '7310');
     $client = new BpsClient($apiKey, $domain);
     try {
         $vars = $client->fetchVars($domain);
@@ -66,7 +66,7 @@ if ($action === 'list-vars') {
     exit();
 }
 
-set_time_limit(300);
+set_time_limit(600);
 
 // Hubungkan database
 $pdo = get_db_connection_safe();
@@ -76,11 +76,18 @@ if (!$input) {
     $input = $_POST;
 }
 
-$apiKey = '6f2b04253bc3c59d762755e3f322f550';
-$domain = '7310';
+$apiKey = get_env('BPS_API_KEY', '6f2b04253bc3c59d762755e3f322f550');
+$domain = $input['domain'] ?? $_GET['domain'] ?? get_env('BPS_DOMAIN', '7310');
 $client = new BpsClient($apiKey, $domain);
 
-$varIds = $input['varIds'] ?? [];
+$varIdSingle = $input['var_id'] ?? $input['varId'] ?? $_GET['var_id'] ?? null;
+$varIds = $input['varIds'] ?? $input['var_ids'] ?? [];
+if ($varIdSingle) {
+    $varIds = [(int)$varIdSingle];
+} elseif (!empty($varIds) && is_string($varIds)) {
+    $varIds = array_filter(array_map('intval', explode(',', $varIds)));
+}
+
 if (empty($varIds)) {
     if ($pdo) {
         try {
@@ -103,14 +110,28 @@ if (empty($varIds)) {
     $varIds = [81, 34, 52];
 }
 
-$startThId = isset($input['start']) ? (int)$input['start'] : 100;
-$endThId = isset($input['end']) ? (int)$input['end'] : 125;
+$startThId = isset($input['start_year']) ? (int)$input['start_year'] : (isset($input['start']) ? (int)$input['start'] : 118);
+$endThId = isset($input['end_year']) ? (int)$input['end_year'] : (isset($input['end']) ? (int)$input['end'] : 126);
 
 try {
-    $subjects = $client->fetchSubjects($domain);
+    $cacheSubjectFile = __DIR__ . '/data/bps_subjects_cache.json';
+    $subjects = [];
+    if (file_exists($cacheSubjectFile) && (time() - filemtime($cacheSubjectFile) < 86400)) {
+        $subjects = json_decode(file_get_contents($cacheSubjectFile), true) ?? [];
+    } else {
+        try {
+            $subjects = $client->fetchSubjects($domain);
+            if (!empty($subjects)) {
+                @file_put_contents($cacheSubjectFile, json_encode($subjects));
+            }
+        } catch (Exception $e) {
+            $subjects = [];
+        }
+    }
 
     if ($pdo) {
         // --- MODE DATABASE AKTIF ---
+        $syncedCount = 0;
         $pdo->beginTransaction();
 
         $stmt_subject = $pdo->prepare("
@@ -137,7 +158,9 @@ try {
         foreach ($varIds as $varId) {
             $varId = (int)$varId;
             $rows = $client->exploreVar($varId, $startThId, $endThId, $domain);
-            if (empty($rows)) continue;
+            if (empty($rows)) {
+                continue;
+            }
 
             $sample = $rows[0];
             $varLabel = $sample['var_label'] ?? "Variabel {$varId}";
@@ -172,37 +195,68 @@ try {
                     $indicatorName = "{$varLabel} ({$turvarLabel})";
                 }
 
-                $stmt_ind = $pdo->prepare("
-                    INSERT INTO indicators (category_id, bps_var_id, bps_vervar_id, bps_turvar_id, name, unit, description)
-                    VALUES (:category_id, :bps_var_id, :bps_vervar_id, :bps_turvar_id, :name, :unit, :description)
-                    ON DUPLICATE KEY UPDATE name = :name, unit = :unit, description = :description
-                ");
-                $stmt_ind->execute([
-                    ':category_id' => $subjectId,
-                    ':bps_var_id' => $varId,
-                    ':bps_vervar_id' => $vervarId,
-                    ':bps_turvar_id' => $turvarId,
-                    ':name' => mb_substr($indicatorName, 0, 255),
-                    ':unit' => mb_substr($unit, 0, 50),
-                    ':description' => $description
-                ]);
+                // Find existing indicator by BPS IDs or Category + Name
+                $vervarVal = $vervarId !== null ? (int)$vervarId : 0;
+                $turvarVal = $turvarId !== null ? (int)$turvarId : 0;
+                $cleanNameStr = mb_substr($indicatorName, 0, 255);
 
-                // Ambil ID indicator
-                $stmt_get_ind = $pdo->prepare("
+                $stmt_find = $pdo->prepare("
                     SELECT id FROM indicators 
-                    WHERE bps_var_id = :bps_var_id 
-                      AND (bps_vervar_id = :bps_vervar_id OR (bps_vervar_id IS NULL AND :bps_vervar_id2 IS NULL))
-                      AND (bps_turvar_id = :bps_turvar_id OR (bps_turvar_id IS NULL AND :bps_turvar_id2 IS NULL))
+                    WHERE (bps_var_id = :var_id AND COALESCE(bps_vervar_id, 0) = :vervar_id AND COALESCE(bps_turvar_id, 0) = :turvar_id)
+                       OR (category_id = :cat_id AND name = :name)
+                    ORDER BY id ASC
                     LIMIT 1
                 ");
-                $stmt_get_ind->execute([
-                    ':bps_var_id' => $varId,
-                    ':bps_vervar_id' => $vervarId,
-                    ':bps_vervar_id2' => $vervarId,
-                    ':bps_turvar_id' => $turvarId,
-                    ':bps_turvar_id2' => $turvarId
+                $stmt_find->execute([
+                    ':var_id' => $varId,
+                    ':vervar_id' => $vervarVal,
+                    ':turvar_id' => $turvarVal,
+                    ':cat_id' => $subjectId,
+                    ':name' => $cleanNameStr
                 ]);
-                $indicatorId = $stmt_get_ind->fetchColumn();
+                $indicatorId = $stmt_find->fetchColumn();
+
+                if ($indicatorId) {
+                    // Update existing
+                    $stmt_upd = $pdo->prepare("
+                        UPDATE indicators 
+                        SET category_id = :category_id,
+                            bps_var_id = :bps_var_id,
+                            bps_vervar_id = :bps_vervar_id,
+                            bps_turvar_id = :bps_turvar_id,
+                            name = :name,
+                            unit = :unit,
+                            description = :description,
+                            updated_at = NOW()
+                        WHERE id = :id
+                    ");
+                    $stmt_upd->execute([
+                        ':category_id' => $subjectId,
+                        ':bps_var_id' => $varId,
+                        ':bps_vervar_id' => $vervarId,
+                        ':bps_turvar_id' => $turvarId,
+                        ':name' => $cleanNameStr,
+                        ':unit' => mb_substr($unit, 0, 50),
+                        ':description' => $description,
+                        ':id' => $indicatorId
+                    ]);
+                } else {
+                    // Insert new
+                    $stmt_ind = $pdo->prepare("
+                        INSERT INTO indicators (category_id, bps_var_id, bps_vervar_id, bps_turvar_id, name, unit, description)
+                        VALUES (:category_id, :bps_var_id, :bps_vervar_id, :bps_turvar_id, :name, :unit, :description)
+                    ");
+                    $stmt_ind->execute([
+                        ':category_id' => $subjectId,
+                        ':bps_var_id' => $varId,
+                        ':bps_vervar_id' => $vervarId,
+                        ':bps_turvar_id' => $turvarId,
+                        ':name' => $cleanNameStr,
+                        ':unit' => mb_substr($unit, 0, 50),
+                        ':description' => $description
+                    ]);
+                    $indicatorId = $pdo->lastInsertId();
+                }
 
                 if (!$indicatorId) continue;
 
@@ -260,6 +314,7 @@ try {
                         ':year' => $year,
                         ':value' => $value
                     ]);
+                    $syncedCount++;
                 }
             }
         }
@@ -320,6 +375,7 @@ try {
         }
 
         // 2. Loop exploreVar
+        $syncedCount = 0;
         foreach ($varIds as $varId) {
             $varId = (int)$varId;
             $rows = $client->exploreVar($varId, $startThId, $endThId, $domain);
@@ -408,6 +464,7 @@ try {
                             'value' => $value
                         ];
                     }
+                    $syncedCount++;
                 }
             }
         }
@@ -418,7 +475,8 @@ try {
         'status' => 'success',
         'message' => 'Proses sinkronisasi data BPS ke local storage selesai' . (!$pdo ? ' (mode Fallback JSON aktif)' : '') . '!',
         'file_path' => 'api/data/bps_data.json',
-        'synced_vars' => $varIds
+        'synced_vars' => $varIds,
+        'synced_values_count' => $syncedCount ?? 0
     ]);
 
 } catch (Exception $e) {
@@ -428,7 +486,7 @@ try {
     http_response_code(500);
     echo json_encode([
         'status' => 'error',
-        'message' => 'Gagal sinkronisasi: ' . $e->getMessage()
+        'message' => 'Gagal sinkronisasi: ' . $e->getMessage() . ' (line ' . $e->getLine() . ' in ' . basename($e->getFile()) . ')'
     ]);
 }
 ?>

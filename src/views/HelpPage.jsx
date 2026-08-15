@@ -102,23 +102,7 @@ export default function HelpPage() {
         </div>
       </div>
 
-      {/* Diagnostics explanation card */}
-      <div className="glass-card" style={{ marginBottom: '1.5rem' }}>
-        <h3 style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '0.5rem' }}>
-          Penjelasan Status Database
-        </h3>
-        <p style={{ fontSize: '0.8rem', color: '#48484a', lineHeight: '1.6', marginBottom: '0.5rem' }}>
-          Portal ini memiliki arsitektur handal yang memantau konektivitas server secara berkala:
-        </p>
-        <ul style={{ fontSize: '0.8rem', color: '#48484a', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-          <li>
-            <b style={{ color: '#248a3d' }}>Connected Database (Pill Hijau):</b> Menunjukkan sistem terhubung dengan database utama MAMP PHPMyAdmin. Data tersinkronisasi penuh secara dinamis.
-          </li>
-          <li>
-            <b style={{ color: '#c97100' }}>JSON Fallback Active (Pill Kuning):</b> Menunjukkan sistem terputus dari database utama (MySQL MAMP mati). Sistem secara otomatis beralih membaca dan menulis ke file penyimpanan JSON local backup. Seluruh fungsi web tetap berjalan normal.
-          </li>
-        </ul>
-      </div>
+
 
       {/* WhatsApp Help Card */}
       <div className="glass-card" style={{ textAlign: 'center', padding: '2rem 1.5rem', background: 'rgba(255,255,255,0.25)' }}>

@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Environment variables & secrets
+.env
+.env.production
+.env.development
+
+# Archives & Temporary debugs
+*.zip
+api/debug_db.php
+graphify-out/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

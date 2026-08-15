@@ -4,6 +4,7 @@ import SidebarLayout from './components/SidebarLayout';
 import LandingPage from './views/LandingPage';
 import Dashboard from './views/Dashboard';
 import IntegratedPST from './views/IntegratedPST';
+import PstSchedule from './views/PstSchedule';
 import HelpPage from './views/HelpPage';
 import ManageServices from './views/ManageServices';
 import Login from './views/Login';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/landing-page" element={<LandingPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/IntegratedPST" element={<IntegratedPST />} />
+          <Route path="/PstSchedule" element={<PstSchedule />} />
           <Route path="/Help" element={<HelpPage />} />
           <Route path="/ManageServices" element={<ManageServices />} />
           <Route path="/login" element={<Login />} />
